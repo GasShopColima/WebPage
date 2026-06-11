@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- ── SEO BÁSICO ── -->
+<title>GasShopColima · Flores Premium y Delivery en Colima 🌿</title>
+<meta name="description" content="Catálogo de flores premium, prerolados y combos en Colima. Top shelf indoor, outdoor y oferta del día con entrega a domicilio en 30–45 min. Pide por WhatsApp.">
+<meta name="theme-color" content="#3fbf75">
+<!-- Dominio en produccion: https://gasshopcolima.netlify.app -->
+<link rel="canonical" href="https://gasshopcolima.netlify.app/">
+
+<!-- Favicon: hoja verde del logo, en SVG inline (no pide archivo extra) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 60'%3E%3Cpath fill='%233fbf75' d='M25 6C24 9 23 13 23 18C19 14 14 13 11 16C14 17 17 19 18 23C14 22 9 22 7 25C10 24 14 25 16 28C12 30 9 33 10 37C13 34 17 33 20 35C18 38 18 42 20 45L23 40 23 56 27 56 27 40 30 45C32 42 32 38 30 35C33 33 37 34 40 37C41 33 38 30 34 28C36 25 40 24 43 25C41 22 36 22 32 23C33 19 36 17 39 16C36 13 31 14 27 18C27 13 26 9 25 6Z'/%3E%3C/svg%3E">
+
+<!-- Open Graph (WhatsApp / Facebook / Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GasShopColima">
+<meta property="og:title" content="GasShopColima · Flores Premium y Delivery en Colima 🌿">
+<meta property="og:description" content="Top shelf indoor, outdoor, prerolados y combos del día. Entrega a domicilio en 30–45 min. Pide por WhatsApp.">
+<meta property="og:url" content="https://gasshopcolima.netlify.app/">
+<meta property="og:image" content="https://gasshopcolima.netlify.app/images/img-01.webp">
+<meta property="og:image:width" content="1638">
+<meta property="og:image:height" content="2048">
+<meta property="og:locale" content="es_MX">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GasShopColima · Flores Premium y Delivery en Colima 🌿">
+<meta name="twitter:description" content="Top shelf indoor, outdoor, prerolados y combos del día. Entrega en 30–45 min. Pide por WhatsApp.">
+<meta name="twitter:image" content="https://gasshopcolima.netlify.app/images/img-01.webp">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+:root{--g:#3fbf75;--bk:#000;--cd:#111;--bd:#1e1e1e;--tx:#e0e0e0;--mt:#555}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:100vh;padding-bottom:100px;max-width:480px;margin:0 auto}
+
+.hero{background:linear-gradient(180deg,#111814,#000);padding:36px 20px 24px;text-align:center;border-bottom:1px solid #1a1a1a;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40px;left:50%;transform:translateX(-50%);width:260px;height:260px;background:radial-gradient(circle,rgba(63,191,117,.07),transparent 70%);pointer-events:none}
+.logo-wrap{display:flex;justify-content:center;margin-bottom:14px}
+.logo-circle{width:76px;height:76px;border-radius:50%;border:2px solid var(--g);background:#111814;display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(63,191,117,.25)}
+.logo-circle svg{width:44px;height:44px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:4px;color:var(--g);line-height:1}
+.hero p{font-size:11px;color:var(--mt);letter-spacing:3px;text-transform:uppercase;margin-top:5px}
+.badge-row{display:flex;justify-content:center;gap:6px;margin-top:12px;flex-wrap:wrap}
+.badge{background:#111814;border:1px solid #3fbf7530;border-radius:20px;padding:4px 11px;font-size:10px;color:var(--g);letter-spacing:1px;text-transform:uppercase}
+
+.section{padding:20px 14px 0}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.section-label{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--g);white-space:nowrap}
+.section-line{flex:1;height:1px;background:linear-gradient(to right,#3fbf7540,transparent)}
+
+.delivery-row{margin:16px 14px 0;background:#111814;border:1px solid #3fbf7530;border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:10px}
+.delivery-row p{font-size:11px;color:#aaa;line-height:1.5}
+.delivery-row p strong{color:var(--g)}
+
+.price-grid{display:flex;flex-direction:column;gap:5px}
+.price-row{background:var(--cd);border:1px solid var(--bd);border-radius:8px;padding:11px 14px;display:flex;justify-content:space-between;align-items:center}
+.price-row .label{font-size:13px;color:#ccc}
+.price-row .label .sub{color:var(--mt);font-size:11px;margin-left:4px}
+.price-row .amount{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff}
+.price-row .amount .sym{color:var(--g);font-size:13px}
+
+.highlight-card{background:#111814;border:1px solid #3fbf7540;border-radius:10px;padding:13px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.highlight-card .info .name{font-size:14px;font-weight:600;color:#fff}
+.highlight-card .info .detail{font-size:10px;color:var(--g);letter-spacing:1px;margin-top:2px;text-transform:uppercase}
+.highlight-card .amount{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--g)}
+
+.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.product-card{background:var(--cd);border:1px solid var(--bd);border-radius:12px;cursor:pointer;overflow:hidden;position:relative;transition:border-color .2s,transform .1s;-webkit-tap-highlight-color:transparent}
+.product-card:active{border-color:var(--g);transform:scale(.98)}
+.product-img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#0d0d0d}
+.product-img-ph{width:100%;aspect-ratio:1/1;background:linear-gradient(135deg,#111814,#111);display:flex;align-items:center;justify-content:center;font-size:36px}
+.product-info{padding:10px 11px 12px}
+.product-info .tag{display:inline-block;background:#3fbf7520;border:1px solid #3fbf7530;border-radius:4px;font-size:9px;color:var(--g);padding:2px 6px;letter-spacing:1px;margin-bottom:5px}
+.product-info .tag.hot{background:#ff4d0020;border-color:#ff4d0040;color:#ff6b35}
+.product-info .pname{font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
+.product-info .pgram{font-size:10px;color:var(--mt);margin-bottom:7px}
+.product-info .pprice{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--g)}
+.product-info .see{font-size:9px;color:#444;margin-top:3px}
+
+/* BESTSELLER RIBBON */
+.bestseller-ribbon{position:absolute;top:10px;left:-1px;background:#ff6b35;color:#fff;font-size:9px;font-weight:700;padding:3px 10px 3px 8px;letter-spacing:1px;border-radius:0 4px 4px 0;z-index:2;text-transform:uppercase}
+
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:100;align-items:flex-end;justify-content:center}
+.overlay.active{display:flex}
+.popup{background:#111;border:1px solid #3fbf7530;border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:88vh;overflow-y:auto;padding:0 0 44px;animation:slideUp .22s ease}
+@keyframes slideUp{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+.popup-handle{width:36px;height:4px;background:#333;border-radius:2px;margin:12px auto 0}
+.popup-body{padding:16px 18px 0}
+.popup-title{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:3px;color:var(--g);margin-bottom:2px}
+.popup-sub{font-size:10px;color:var(--mt);margin-bottom:10px;letter-spacing:1px;text-transform:uppercase}
+.popup-desc{font-size:12px;color:#999;line-height:1.5;margin-bottom:14px}
+.popup-price-row{background:#111814;border:1px solid #3fbf7530;border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.popup-price-row .pl{font-size:12px;color:#aaa}
+.popup-price-row .pr{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--g)}
+.strains-title{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;color:#444;margin-bottom:8px;text-transform:uppercase}
+
+.strain-list{display:flex;flex-direction:column;gap:8px}
+.strain-item{background:#0a0a0a;border:1px solid var(--bd);border-radius:10px;overflow:hidden}
+.strain-img-row{display:flex;align-items:stretch}
+.strain-img{width:80px;height:80px;object-fit:cover;flex-shrink:0}
+.strain-img-ph{width:80px;height:80px;background:linear-gradient(135deg,#111814,#111);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.strain-content{padding:10px 12px;flex:1;display:flex;flex-direction:column;justify-content:center}
+.strain-top{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.strain-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.dot-sativa{background:#ffdd44}.dot-indica{background:#9b59b6}.dot-hybrid{background:var(--g)}
+.strain-name{font-size:13px;font-weight:700;color:#fff}
+.strain-type{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--mt);background:#1a1a1a;padding:2px 6px;border-radius:4px;margin-left:auto}
+.strain-desc{font-size:10px;color:var(--mt);line-height:1.4}
+
+.popup-note{font-size:10px;color:#333;text-align:center;margin-top:12px}
+.popup-close{width:calc(100% - 36px);margin:16px 18px 0;background:#1a1a1a;border:1px solid var(--bd);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:14px;border-radius:10px;cursor:pointer;letter-spacing:1px;display:block}
+
+.info-bar{margin:12px 14px 0;background:var(--cd);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+.info-item{display:flex;align-items:center;gap:13px;padding:12px 15px;border-bottom:1px solid var(--bd)}
+.info-item:last-child{border-bottom:none}
+.info-icon{font-size:17px;width:30px;text-align:center;flex-shrink:0}
+.info-text .it{font-size:10px;color:var(--mt)}
+.info-text .iv{font-size:13px;color:#fff;font-weight:500;margin-top:1px}
+.info-text .iv .green{color:var(--g)}
+
+.wa-btn{position:fixed;bottom:22px;right:16px;background:#25d366;color:#fff;border:none;border-radius:50px;padding:13px 20px;display:flex;align-items:center;gap:9px;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;z-index:50;letter-spacing:.5px}
+.wa-btn svg{width:21px;height:21px;flex-shrink:0}
+
+/* ── HORARIO ── */
+#horario-bar{padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-align:center}
+#horario-bar.open{background:rgba(63,191,117,.1);color:#3fbf75;border-bottom:1px solid #3fbf7528}
+#horario-bar.closed{background:rgba(255,60,60,.07);color:#ff5555;border-bottom:1px solid #ff333320}
+
+/* ── STATS BAR ── */
+.stats-bar{display:flex;gap:6px;padding:14px 14px 12px;border-bottom:1px solid #0f0f0f;overflow-x:auto;scrollbar-width:none}
+.stats-bar::-webkit-scrollbar{display:none}
+.stat-item{flex:1;min-width:78px;text-align:center;padding:11px 4px 10px;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:10px}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--g);line-height:1}
+.stat-lbl{font-size:9px;color:#555;letter-spacing:.3px;text-transform:uppercase;margin-top:3px;line-height:1.3}
+
+/* ── COMBO DEL DÍA ── */
+.combo-section{margin:16px 14px 0;background:linear-gradient(135deg,#0a2208,#111800);border:2px solid #3fbf7545;border-radius:14px;padding:18px 16px;position:relative;overflow:hidden}
+.combo-section::before{content:'';position:absolute;top:-40px;right:-20px;width:150px;height:150px;background:radial-gradient(circle,rgba(63,191,117,.09),transparent 65%);pointer-events:none}
+.combo-eyebrow{font-size:9px;letter-spacing:3px;color:#3fbf7575;text-transform:uppercase;margin-bottom:5px}
+.combo-title{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;line-height:1.3;margin-bottom:10px}
+.combo-price-line{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.combo-price-line .big{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--g);line-height:1}
+.combo-price-line .save{font-size:10px;color:#888;background:#ffffff0d;padding:3px 9px;border-radius:20px;white-space:nowrap}
+.combo-wa{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;font-size:13px;font-weight:700;padding:11px 18px;border-radius:10px;text-decoration:none}
+
+/* ── FILTER TABS ── */
+.filter-wrap{padding:10px 14px 0;overflow-x:auto;scrollbar-width:none}
+.filter-wrap::-webkit-scrollbar{display:none}
+.filter-tabs{display:flex;gap:6px;min-width:max-content}
+.ftab{background:#0a0a0a;border:1px solid #222;color:#555;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;padding:7px 16px;border-radius:20px;cursor:pointer;letter-spacing:.3px;transition:all .18s;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+.ftab.active{background:#3fbf7518;border-color:#3fbf7565;color:var(--g)}
+.product-card.hidden{display:none!important}
+
+/* ── CART & SHARE BUTTONS ── */
+.btn-add{position:absolute;bottom:10px;right:10px;width:30px;height:30px;background:var(--g);color:#000;border:none;border-radius:50%;font-size:21px;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;-webkit-tap-highlight-color:transparent;transition:transform .1s}
+.btn-add:active{transform:scale(.82)}
+.btn-share{position:absolute;top:10px;right:10px;width:28px;height:28px;background:rgba(0,0,0,.65);border:1px solid #333;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;-webkit-tap-highlight-color:transparent}
+.btn-add-pr{background:transparent;border:1px solid #3fbf7540;color:var(--g);min-width:26px;height:26px;border-radius:50%;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;-webkit-tap-highlight-color:transparent;padding:0;line-height:1}
+.btn-add-pr:active{background:#3fbf7525}
+.price-row{position:relative}
+.price-row .btn-add-pr{margin-left:6px}
+
+/* ── FLOATING CART ── */
+#cart-float{position:fixed;bottom:88px;right:14px;background:#0c0c0c;border:1px solid #3fbf7545;border-radius:16px;padding:14px;z-index:200;min-width:200px;max-width:270px;display:none;box-shadow:0 8px 32px rgba(0,0,0,.85),0 0 20px rgba(63,191,117,.08)}
+#cart-float.show{display:block;animation:slideUp .2s ease}
+.cf-header{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;color:var(--g);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.cf-close{background:none;border:none;color:#444;font-size:18px;cursor:pointer;line-height:1;padding:0}
+.cf-items{max-height:150px;overflow-y:auto;margin-bottom:10px;scrollbar-width:thin;scrollbar-color:#222 transparent}
+.cf-item{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #1a1a1a;gap:6px;font-size:11px}
+.cf-item:last-child{border-bottom:none}
+.cf-name{color:#ccc;flex:1;line-height:1.3}
+.cf-qty{color:var(--g);font-weight:700;white-space:nowrap;font-size:10px}
+.cf-rm{background:none;border:none;color:#3a3a3a;font-size:15px;cursor:pointer;padding:0 2px;line-height:1}
+.cf-total{font-family:'Bebas Neue',sans-serif;font-size:17px;color:#fff;margin-bottom:10px}
+.cf-total span{color:var(--g)}
+.cf-send{width:100%;background:#25d366;color:#fff;border:none;padding:11px;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:6px;letter-spacing:.3px}
+.cf-clear{background:none;border:none;color:#333;font-size:10px;cursor:pointer;width:100%;padding:2px;letter-spacing:.5px}
+#cart-bubble{position:fixed;bottom:88px;right:14px;background:var(--g);color:#000;width:34px;height:34px;border-radius:50%;font-size:13px;font-weight:800;display:none;align-items:center;justify-content:center;z-index:201;cursor:pointer;box-shadow:0 2px 14px rgba(63,191,117,.45);border:2px solid #000}
+#cart-bubble.show{display:flex;animation:popIn .2s cubic-bezier(.175,.885,.32,1.275)}
+@keyframes popIn{from{transform:scale(0)}to{transform:scale(1)}}
+
+/* ── FAQ ── */
+.faq-section{padding:24px 14px 0}
+.faq-item{background:#0a0a0a;border:1px solid #1c1c1c;border-radius:10px;margin-bottom:6px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 15px;cursor:pointer;-webkit-tap-highlight-color:transparent;gap:10px}
+.faq-q-text{font-size:13px;font-weight:600;color:#e0e0e0;line-height:1.35;flex:1}
+.faq-icon{color:var(--g);font-size:22px;line-height:1;flex-shrink:0;transition:transform .22s}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .22s}
+.faq-item.open .faq-a{max-height:300px;padding:0 15px 14px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a p{font-size:12px;color:#777;line-height:1.7}
+
+
+
+/* ── STRAIN PICKER ── */
+#sp-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:300;align-items:flex-end;justify-content:center}
+#sp-overlay.active{display:flex}
+#sp-popup{background:#111;border:1px solid #3fbf7530;border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:82vh;overflow-y:auto;padding:0 0 36px;animation:slideUp .22s ease}
+#sp-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--g);margin-bottom:2px}
+#sp-sub{font-size:10px;color:var(--mt);margin-bottom:14px;letter-spacing:1px}
+.sp-strain-item{background:#0a0a0a;border:1px solid #1e1e1e;border-radius:10px;overflow:hidden;display:flex;align-items:stretch;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .15s;position:relative;margin-bottom:8px}
+.sp-strain-item:active{border-color:#3fbf7550;background:#111814}
+.sp-img{width:72px;height:72px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.sp-img.type-s{background:linear-gradient(135deg,#2a2200,#111)}
+.sp-img.type-i{background:linear-gradient(135deg,#1a0a2a,#111)}
+.sp-img.type-h{background:linear-gradient(135deg,#0a1a08,#111)}
+.sp-add-pill{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--g);color:#000;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;flex-shrink:0}
+
+/* ── LAYOUT FIX PLUMAS ── */
+#plumas-grid{grid-template-columns:1fr!important}
+#plumas-grid .product-card{grid-column:unset!important}
+/* imagen directa (muhamed, besos) */
+#plumas-grid .product-card>img.product-img{
+  width:100%;height:220px;aspect-ratio:unset!important;
+  object-fit:contain;background:#080808;
+  border-radius:12px 12px 0 0;display:block}
+/* contenedor split (boutiq, fryd, sluggers, jeeters, bigchief) */
+#plumas-grid .product-card>div[style*="overflow:hidden"]{
+  height:220px!important;overflow:hidden!important}
+/* imagen izquierda (50%): contain para no aplastar */
+#plumas-grid .product-card>div[style*="overflow:hidden"]>img{
+  height:220px!important;width:50%!important;flex-shrink:0!important;
+  object-fit:contain!important;background:#080808!important;
+  aspect-ratio:unset!important;object-position:center!important}
+/* panel derecho (precio/info) también 220px */
+#plumas-grid .product-card>div[style*="overflow:hidden"]>div{
+  height:220px!important;min-height:220px!important}
+/* info section consistente */
+#plumas-grid .product-card .product-info{padding:12px 14px 14px}
+#plumas-grid .product-card .pprice{font-size:24px}
+
+/* ── STRAIN PANEL ── */
+#strain-panel{padding:0 14px 0;overflow:hidden;transition:max-height .3s ease}
+#strain-panel.show{padding:10px 14px 0}
+.sp-label{font-size:9px;color:#444;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.strain-chips{display:flex;flex-wrap:wrap;gap:6px}
+.strain-chip{display:inline-flex;align-items:center;gap:7px;background:#0d0d0d;border:1px solid #1e1e1e;border-radius:8px;padding:7px 11px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .15s}
+.strain-chip:active{border-color:#3fbf7550}
+.sc-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.sc-name{font-size:12px;font-weight:600;color:#e8e8e8}
+.sc-prod{font-size:10px;color:#444;border-left:1px solid #2a2a2a;padding-left:7px;white-space:nowrap}
+
+/* ── PAYMENT METHODS ── */
+.pay-grid{display:flex;gap:8px}
+.pay-item{flex:1;text-align:center;background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:12px 8px}
+.pay-icon{font-size:24px;display:block;margin-bottom:5px}
+.pay-name{font-size:10px;color:#666;letter-spacing:.3px}
+
+/* ── CÓMO PEDIR ── */
+.howto{padding:22px 14px 0}
+.howto-steps{display:flex;flex-direction:column;gap:8px}
+.howto-step{display:flex;align-items:flex-start;gap:13px;background:#0a0a0a;border:1px solid #1c1c1c;border-radius:12px;padding:14px 15px}
+.howto-num{width:30px;height:30px;flex-shrink:0;border-radius:50%;background:rgba(63,191,117,.1);border:1px solid #3fbf7540;color:var(--g);font-family:'Bebas Neue',sans-serif;font-size:17px;display:flex;align-items:center;justify-content:center;line-height:1}
+.howto-txt .ht{font-size:13px;font-weight:600;color:#e8e8e8;margin-bottom:2px}
+.howto-txt .hd{font-size:11px;color:#777;line-height:1.5}
+
+/* ── AGE GATE 21+ ── */
+#agegate{position:fixed;inset:0;z-index:1000;background:#000;display:flex;align-items:center;justify-content:center;padding:28px 22px;text-align:center}
+#agegate.hide{display:none}
+.ag-card{max-width:360px;width:100%}
+.ag-logo{width:64px;height:64px;border-radius:50%;border:2px solid var(--g);background:#111814;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.ag-logo svg{width:36px;height:36px}
+.ag-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:#fff;line-height:1.1;margin-bottom:10px}
+.ag-title span{color:var(--g)}
+.ag-text{font-size:12px;color:#888;line-height:1.6;margin-bottom:22px}
+.ag-btn{width:100%;background:var(--g);color:#06150d;border:none;border-radius:11px;padding:15px;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;letter-spacing:.5px;cursor:pointer;margin-bottom:10px}
+.ag-no{width:100%;background:transparent;border:1px solid #2a2a2a;color:#666;border-radius:11px;padding:13px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer}
+.ag-legal{font-size:10px;color:#444;line-height:1.5;margin-top:18px}
+
+</style>
+</head>
+<body>
+
+<!-- ── VERIFICACIÓN DE EDAD 21+ ── -->
+<div id="agegate">
+  <div class="ag-card">
+    <div class="ag-logo"><svg viewBox="0 0 50 60" xmlns="http://www.w3.org/2000/svg"><path fill="#3fbf75" d="M25 6C24 9 23 13 23 18C19 14 14 13 11 16C14 17 17 19 18 23C14 22 9 22 7 25C10 24 14 25 16 28C12 30 9 33 10 37C13 34 17 33 20 35C18 38 18 42 20 45L23 40 23 56 27 56 27 40 30 45C32 42 32 38 30 35C33 33 37 34 40 37C41 33 38 30 34 28C36 25 40 24 43 25C41 22 36 22 32 23C33 19 36 17 39 16C36 13 31 14 27 18C27 13 26 9 25 6Z"/></svg></div>
+    <div class="ag-title">¿ERES MAYOR DE <span>21</span>?</div>
+    <div class="ag-text">Este sitio contiene información sobre productos de cannabis. Debes tener <strong style="color:#aaa">21 años o más</strong> para entrar.</div>
+    <button class="ag-btn" onclick="ageConfirm()">Sí, soy mayor de 21</button>
+    <button class="ag-no" onclick="ageDeny()">No, soy menor</button>
+    <div class="ag-legal">Al entrar confirmas que eres mayor de edad y aceptas que verifiquemos tu identificación al momento de la entrega. Mantener fuera del alcance de menores.</div>
+  </div>
+</div>
+<script>
+  // Oculta de inmediato si ya verificó antes (evita parpadeo)
+  if(localStorage.getItem('age_ok')==='1'){document.getElementById('agegate').classList.add('hide');}
+  else{document.body.style.overflow='hidden';}
+  function ageConfirm(){localStorage.setItem('age_ok','1');document.getElementById('agegate').classList.add('hide');document.body.style.overflow='';}
+  function ageDeny(){window.location.href='https://www.google.com';}
+</script>
+
+<div class="hero">
+  <div class="logo-wrap"><div class="logo-circle"><svg viewBox="0 0 50 60" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#3fbf75" opacity=".95" d="
+    M25 6
+    C24 9 23 13 23 18
+    C19 14 14 13 11 16
+    C14 17 17 19 18 23
+    C14 22 9 22 7 25
+    C10 24 14 25 16 28
+    C12 30 9 33 10 37
+    C13 34 17 33 20 35
+    C18 38 18 42 20 45
+    L23 40 L23 56 L27 56 L27 40 L30 45
+    C32 42 32 38 30 35
+    C33 33 37 34 40 37
+    C41 33 38 30 34 28
+    C36 25 40 24 43 25
+    C41 22 36 22 32 23
+    C33 19 36 17 39 16
+    C36 13 31 14 27 18
+    C27 13 26 9 25 6 Z
+  "/>
+</svg></div></div>
+  <h1>GasShopColima</h1>
+  <p>Flores Premium · Colima</p>
+  <div class="badge-row"><span class="badge">Top Shelf</span><span class="badge">Delivery</span><span class="badge">Est. 2025</span></div>
+</div>
+
+<div id="horario-bar"></div>
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num" data-to="50" data-suf="+">50+</div><div class="stat-lbl">Pedidos<br>entregados</div></div>
+  <div class="stat-item"><div class="stat-num">30–45</div><div class="stat-lbl">Min de<br>entrega</div></div>
+  <div class="stat-item"><div class="stat-num">10–8</div><div class="stat-lbl">Horario<br>Lun–Dom</div></div>
+</div>
+
+<!-- FLOR ESTÁNDAR -->
+<div class="section">
+  <div class="section-header"><span class="section-label">Flor Estándar</span><div class="section-line"></div></div>
+  <div class="price-grid">
+    <div class="price-row"><span class="label">1 OZ <span class="sub">(28g)</span></span><span class="amount"><span class="sym">$</span>450</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('1 OZ (28g)',450)" title="Agregar">+</button></div>
+    <div class="price-row"><span class="label">2 OZ <span class="sub">(56g)</span></span><span class="amount"><span class="sym">$</span>850</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('2 OZ (56g)',850)" title="Agregar">+</button></div>
+    <div class="price-row"><span class="label">3 OZ <span class="sub">(84g)</span></span><span class="amount"><span class="sym">$</span>1,100</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('3 OZ (84g)',1100)" title="Agregar">+</button></div>
+  </div>
+</div>
+
+<!-- OUTDOOR -->
+<div class="section">
+  <div class="section-header"><span class="section-label">Outdoor</span><div class="section-line"></div></div>
+  <div class="price-grid">
+    <div class="price-row"><span class="label">½ OZ <span class="sub">(14g)</span></span><span class="amount"><span class="sym">$</span>350</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('½ OZ (14g)',350)" title="Agregar">+</button></div>
+    <div class="price-row"><span class="label">1 OZ <span class="sub">(28g)</span></span><span class="amount"><span class="sym">$</span>650</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('1 OZ (28g)',650)" title="Agregar">+</button></div>
+  </div>
+</div>
+
+<!-- INDOOR -->
+<div class="section">
+  <div class="section-header"><span class="section-label">Indoor</span><div class="section-line"></div></div>
+  <div class="price-grid">
+    <div class="price-row"><span class="label">¼ OZ <span class="sub">(7g)</span></span><span class="amount"><span class="sym">$</span>300</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('¼ OZ (7g)',300)" title="Agregar">+</button></div>
+    <div class="price-row"><span class="label">½ OZ <span class="sub">(14g)</span></span><span class="amount"><span class="sym">$</span>500</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('½ OZ (14g)',500)" title="Agregar">+</button></div>
+  </div>
+</div>
+
+
+<div class="combo-section">
+  <div class="combo-eyebrow">Oferta del día</div>
+  <div class="combo-title">Baby Jeeter + Indoor ½ oz</div>
+  <div class="combo-price-line">
+    <div class="big">$1,100</div>
+    <div class="save">Ahorras $150</div>
+  </div>
+  <a class="combo-wa" href="https://wa.me/523121079351?text=Hola%20GasShopColima!%20%F0%9F%8C%BF%20Quiero%20el%20Combo%20del%20D%C3%ADa%3A%20Baby%20Jeeter%20%2B%20Indoor%20%C2%BD%20oz%20%3D%20%241%2C100%20%F0%9F%94%A5" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.554 4.112 1.522 5.84L.057 23.882l6.204-1.628A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.838 0-3.568-.494-5.063-1.358l-.363-.215-3.683.966.983-3.595-.236-.371A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    Quiero este combo
+  </a>
+</div>
+
+<!-- PREROLADOS -->
+<div class="section">
+  <div class="section-header"><span class="section-label">Prerolados</span><div class="section-line"></div></div>
+  <div class="highlight-card">
+    <div class="info"><div class="name">Gallitos Premium</div><div class="detail">Bolsa 36 KingSize · Mejor precio</div></div>
+    <div class="amount">$1,500</div>
+  <button class="btn-add-pr" onclick="addToCart('Gallitos Premium',1500)" title="Agregar">+</button>
+  </div>
+  <div class="price-row" style="margin-bottom:8px"><span class="label">Gallito individual</span><span class="amount"><span class="sym">$</span>75</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('Gallito individual',75)" title="Agregar">+</button></div>
+  <video autoplay muted loop playsinline webkit-playsinline style="width:100%;border-radius:10px;margin:10px 0 12px;display:block"><source src="images/video-01.mp4" type="video/mp4"></video>
+  <div class="product-grid" style="margin-top:6px">
+
+    <!-- SLUGGERS -->
+    <div class="product-card" onclick="openPopup('sluggers')" style="grid-column:1/-1;position:relative" data-product="Sluggers Hit" data-price="850" data-types="sativa indica hybrid"><button class="btn-add" onclick="event.stopPropagation();pickStrain('Sluggers Hit',850)" title="Agregar al carrito">+</button><button class="btn-share" onclick="event.stopPropagation();shareProduct('Sluggers Hit')" title="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+      <div style="display:flex;overflow:hidden;border-radius:12px 12px 0 0">
+        <img src="images/img-01.webp" onerror="this.style.display='none'" style="width:50%;height:220px;object-fit:contain;background:#080808">
+        <div style="width:50%;height:220px;background:linear-gradient(135deg,#111814,#111);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--g)">$850</div>
+          <div style="font-size:9px;color:#555;letter-spacing:1px">5-PACK · 3.5G</div>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="tag">TRIPLE INFUSED · LIQUID DIAMONDS + KIEF</div>
+        <div class="pname">Sluggers Hit</div>
+        <div class="pgram">0.7g por joint · Premium flower + solventless hash</div>
+        <div class="see">Toca para ver strains →</div>
+      </div>
+    </div>
+
+    <!-- BABY JEETERS -->
+    <div class="product-card" onclick="openPopup('jeeters')" style="grid-column:1/-1;position:relative" data-product="Baby Jeeter" data-price="850" data-types="sativa indica hybrid"><button class="btn-add" onclick="event.stopPropagation();pickStrain('Baby Jeeter',850)" title="Agregar al carrito">+</button><button class="btn-share" onclick="event.stopPropagation();shareProduct('Baby Jeeter')" title="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+      <div style="display:flex;overflow:hidden;border-radius:12px 12px 0 0">
+<img src="images/img-02.webp" style="width:50%;height:220px;object-fit:contain;background:#080808;flex-shrink:0">
+        <div style="width:50%;height:220px;background:linear-gradient(135deg,#111,#1a0a0a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--g)">$850</div>
+          <div style="font-size:9px;color:#555;letter-spacing:1px">5-PACK · 2.5G</div>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="tag">CANNABIS OIL + KIEF · 35%+ THC</div>
+        <div class="pname">Baby Jeeter</div>
+        <div class="pgram">0.5g por joint · Indoor flower infused · Marca #1 en California</div>
+        <div class="see">Toca para ver strains →</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PLUMAS -->
+<div class="section">
+  <div class="section-header"><span class="section-label">Plumas Nacionales</span><div class="section-line"></div></div>
+  <div class="filter-wrap"><div class="filter-tabs">
+  <button class="ftab active" data-type="all" onclick="filterPlumas(this,'all')">Todos</button>
+  <button class="ftab" data-type="sativa" onclick="filterPlumas(this,'sativa')">Sativa</button>
+  <button class="ftab" data-type="indica" onclick="filterPlumas(this,'indica')">Índica</button>
+  <button class="ftab" data-type="hybrid" onclick="filterPlumas(this,'hybrid')">Híbrido</button>
+</div></div>
+  <div id="strain-panel"><div class="sp-label">Strains disponibles</div><div class="strain-chips" id="strain-list"></div></div>
+  <div class="product-grid" id="plumas-grid">
+
+    <!-- BOUTIQ -->
+    <div class="product-card" onclick="openPopup('boutiq')" style="grid-column:1/-1;position:relative" data-product="Boutiq Switch V5" data-price="850" data-types="hybrid"><button class="btn-add" onclick="event.stopPropagation();pickStrain('Boutiq Switch V5',850)" title="Agregar al carrito">+</button><button class="btn-share" onclick="event.stopPropagation();shareProduct('Boutiq Switch V5')" title="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+      <div style="display:flex;overflow:hidden;border-radius:12px 12px 0 0">
+        <img src="images/img-03.webp" onerror="this.style.display='none'" style="width:50%;height:220px;object-fit:contain;background:#080808">
+        <div style="width:50%;height:220px;background:linear-gradient(135deg,#0d0d25,#111);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:10px">
+          <div style="font-size:9px;color:var(--g);letter-spacing:2px">3 STRAINS EN 1</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:11px;color:#fff;letter-spacing:1px;text-align:center;opacity:.8">Italian Ice · Lemon Cherry · Z-Runtz</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--g)">$850</div>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="pname">Boutiq Switch V5</div>
+        <div class="pgram">2G · Triple tank · Cambia de strain con un click</div>
+        <div class="see">Toca para ver strains →</div>
+      </div>
+    </div>
+
+    <!-- FRYD 2G -->
+    <div class="product-card" onclick="openPopup('fryd2')" style="position:relative;grid-column:1/-1" data-product="Fryd 2G" data-price="900" data-types="sativa indica hybrid"><button class="btn-add" onclick="event.stopPropagation();pickStrain('Fryd 2G',900)" title="Agregar al carrito">+</button><button class="btn-share" onclick="event.stopPropagation();shareProduct('Fryd 2G')" title="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+      <div style="display:flex;overflow:hidden;border-radius:12px 12px 0 0">
+        <img src="images/img-04.webp" onerror="this.style.display='none'" style="width:50%;height:220px;object-fit:contain;background:#080808">
+        <div style="width:50%;height:220px;background:linear-gradient(135deg,#1a0a1a,#111);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--g)">$900</div>
+          <div style="font-size:9px;color:#555;letter-spacing:1px">2G + 🍬 GUMMIES</div>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="tag">LIQUID BATTER · LIVE RESIN · INCLUYE 5 GUMMIES 10MG</div>
+        <div class="pname">Fryd 2G</div>
+        <div class="pgram">Liquid batter + live resin · Gummies de regalo incluidos</div>
+        <div class="see">Toca para ver sabores →</div>
+      </div>
+    </div>
+
+    <!-- BIG CHIEF -->
+    <div class="product-card" onclick="openPopup('bigchief')" style="grid-column:1/-1;position:relative" data-product="Big Chief DUO" data-price="850" data-types="indica sativa"><button class="btn-add" onclick="event.stopPropagation();pickStrain('Big Chief DUO',850)" title="Agregar al carrito">+</button><button class="btn-share" onclick="event.stopPropagation();shareProduct('Big Chief DUO')" title="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+      <div style="display:flex;overflow:hidden;border-radius:12px 12px 0 0">
+        <img src="images/img-05.webp" style="width:50%;height:220px;object-fit:contain;background:#080808;flex-shrink:0">
+        <div style="width:50%;height:220px;background:linear-gradient(135deg,#111728,#0a0a20);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:10px">
+          <div style="font-size:9px;color:#c8a84b;letter-spacing:1px;text-align:center">Frozen Cherries × Raspberry Parfait</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--g)">$850</div>
+          <div style="font-size:9px;color:#555">2G · Dual strain</div>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="tag">2 STRAINS · LIQUID DIAMONDS · LEFT & RIGHT</div>
+        <div class="pname">Big Chief DUO</div>
+        <div class="pgram">2G · Indica left · Sativa right · Switch de lado</div>
+        <div class="see">Toca para ver combos →</div>
+      </div>
+    </div>
+
+    <!-- MUHAMED -->
+    <div class="product-card" onclick="openPopup('muhamed')" style="position:relative" data-product="MuhaMed" data-price="850" data-types="sativa indica hybrid"><button class="btn-add" onclick="event.stopPropagation();pickStrain('MuhaMed',850)" title="Agregar al carrito">+</button><button class="btn-share" onclick="event.stopPropagation();shareProduct('MuhaMed')" title="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+      <img src="images/img-06.webp" class="product-img">
+      <div class="product-info">
+        <div class="tag">2G</div>
+        <div class="pname">MuhaMed</div>
+        <div class="pgram">Live resin · Disposable</div>
+        <div class="pprice">$850</div>
+        <div class="see">Ver sabores →</div>
+      </div>
+    </div>
+
+    <!-- BESOS -->
+    <div class="product-card" onclick="openPopup('besos')" style="position:relative" data-product="Besos" data-price="850" data-types="sativa indica hybrid"><button class="btn-add" onclick="event.stopPropagation();pickStrain('Besos',850)" title="Agregar al carrito">+</button><button class="btn-share" onclick="event.stopPropagation();shareProduct('Besos')" title="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+      <img src="images/img-07.webp" class="product-img">
+      <div class="product-info">
+        <div class="tag">2G</div>
+        <div class="pname">Besos</div>
+        <div class="pgram">Liquid diamonds · Disposable</div>
+        <div class="pprice">$850</div>
+        <div class="see">Ver sabores →</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- DELIVERY + INFO -->
+<div class="delivery-row" style="margin-top:20px">
+  <div style="font-size:18px">🛵</div>
+  <p><strong>Entregamos en:</strong> Colima, Villa de Álvarez y alrededores</p>
+</div>
+<div class="info-bar">
+  <div class="info-item"><div class="info-icon">📱</div><div class="info-text"><div class="it">WhatsApp / Llamadas</div><div class="iv"><span class="green">312 107 9351</span></div></div></div>
+  <div class="info-item"><div class="info-icon">🕐</div><div class="info-text"><div class="it">Horario</div><div class="iv">Lun–Dom · 10:00am – 8:00pm</div></div></div>
+</div>
+
+
+<!-- CÓMO PEDIR -->
+<div class="howto">
+  <div class="section-header"><span class="section-label">Cómo pedir</span><div class="section-line"></div></div>
+  <div class="howto-steps">
+    <div class="howto-step">
+      <div class="howto-num">1</div>
+      <div class="howto-txt"><div class="ht">Elige tus productos</div><div class="hd">Toca el botón <strong style="color:#3fbf75">+</strong> en cualquier producto para armar tu pedido, o anota lo que quieras.</div></div>
+    </div>
+    <div class="howto-step">
+      <div class="howto-num">2</div>
+      <div class="howto-txt"><div class="ht">Escríbenos por WhatsApp</div><div class="hd">Dinos qué quieres y en qué zona estás. Te confirmamos disponibilidad y te mandamos el total a pagar.</div></div>
+    </div>
+    <div class="howto-step">
+      <div class="howto-num">3</div>
+      <div class="howto-txt"><div class="ht">Paga y listo — te lo mandamos con Rappi</div><div class="hd">Realiza tu pago (BBVA, Banco Azteca, Kiosko, Farmacias Guadalajara/del Ahorro, Walmart, Soriana, Bodega Aurrera o transferencia). Confirmamos y mandamos a tu puerta en 30–45 min con Rappi.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <div class="section-header"><span class="section-label">Preguntas frecuentes</span><div class="section-line"></div></div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">¿Cómo hago mi pedido?</span><span class="faq-icon">+</span></div>
+    <div class="faq-a"><p>Toca el botón de WhatsApp en cualquier producto o usa el carrito (+) para armar tu pedido. Te respondemos en minutos y coordinamos la entrega a tu ubicación.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">¿Qué métodos de pago aceptan?</span><span class="faq-icon">+</span></div>
+    <div class="faq-a"><p>Transferencia bancaria (SPEI), BBVA, Banco Azteca, Kiosko, Farmacias Guadalajara, Farmacias del Ahorro, Walmart, Soriana y Bodega Aurrera. Sin cargos extras. El pago es <strong style="color:#ccc">antes</strong> de la entrega.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">¿Cuánto tarda el delivery?</span><span class="faq-icon">+</span></div>
+    <div class="faq-a"><p>Entre 30 y 45 minutos en zonas de Colima. En horas pico puede ser un poco más. Te avisamos cuando el repartidor salga.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">¿Hacen entregas en toda la ciudad?</span><span class="faq-icon">+</span></div>
+    <div class="faq-a"><p>Cubrimos Colima y Villa de Álvarez. Pregunta por tu colonia si tienes duda — hacemos lo posible por llegar.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">¿Tienen garantía de calidad?</span><span class="faq-icon">+</span></div>
+    <div class="faq-a"><p><strong style="color:#ccc">①</strong> Contáctanos por WhatsApp dentro de las <strong style="color:#ccc">2 horas</strong> de recibir tu pedido. <strong style="color:#ccc">②</strong> Mándanos un video corto mostrando el defecto (dispositivo que no jala, product dañado, strain incorrecto). <strong style="color:#ccc">③</strong> Verificamos y te reponemos el producto en tu siguiente pedido o hacemos ajuste de precio. Nota: no aplica si el producto ya fue usado más del 20% ni en casos de mal uso.</p></div>
+  </div>
+</div>
+<a class="wa-btn" href="https://wa.me/523121079351?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20de%20GasShopColima%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%8C%BF" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Pedir ahora
+</a>
+
+<!-- ═══ POPUPS ═══ -->
+
+<!-- SLUGGERS -->
+<div class="overlay" id="popup-sluggers" onclick="closeOnOverlay(event,'sluggers')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">Sluggers Hit</div>
+    <div class="popup-sub">5-PACK · 3.5G · TRIPLE INFUSED · LIQUID DIAMONDS + KIEF</div>
+    <div class="popup-desc">Premium flower + solventless hash + liquid diamonds + kief. 0.7g por joint. Collectible card incluida en cada pack.</div>
+    <div class="popup-price-row"><span class="pl">Pack 5 joints</span><span class="pr">$850</span></div>
+    <div class="strains-title">Strains disponibles</div>
+    <div class="strain-list">
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-08.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Runtz</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Zkittlez × Gelato · Candy dulce, cremoso, smooth todo el día</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-01.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-sativa"></div><div class="strain-name">Rainbow Road</div><div class="strain-type">Sativa</div></div><div class="strain-desc">Sherbet × Rainbow Chip · Frutal, ácido, energía y creatividad</div></div></div></div>
+      
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-09.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Euphoria</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Gas cremoso floral · Felicidad y euforia intensa</div></div></div></div>
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-10.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Horchata</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Vainilla, especiado, cremoso · Muy suave y relajante</div></div></div></div>
+      
+    </div>
+    <div class="popup-note">Pregunta por disponibilidad · Stock varía por semana</div>
+    <button class="popup-close" onclick="closePopup('sluggers')">Cerrar</button>
+  </div></div>
+</div>
+
+<!-- BABY JEETERS -->
+<div class="overlay" id="popup-jeeters" onclick="closeOnOverlay(event,'jeeters')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">Baby Jeeter</div>
+    <div class="popup-sub">5-PACK · 2.5G · CANNABIS OIL + KIEF · 35%+ THC · MARCA #1 CALIFORNIA</div>
+    <div class="popup-desc">Indoor flower premium infused con cannabis oil y coated en kief. 0.5g por joint. Los pre-rolls más vendidos en California.</div>
+    <div class="popup-price-row"><span class="pl">Pack 5 joints</span><span class="pr">$850</span></div>
+    <div class="strains-title">Strains disponibles</div>
+<div class="strain-list">
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-11.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Apple Fritter</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Manzana dulce, terroso, pastel · Relajante y equilibrado · 24% THC</div></div></div></div>
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-12.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Watermelon Zkittlez</div><div class="strain-type">Índica</div></div><div class="strain-desc">Zkittlez × Watermelon · Frutal intenso, ideal para final del día</div></div></div></div>
+      
+      
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-13.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-sativa"></div><div class="strain-name">Maui Wowie</div><div class="strain-type">Sativa</div></div><div class="strain-desc">Tropical, piña, fresco · Energizante y creativo</div></div></div></div>
+      
+      
+      
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-14.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Horchata</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Vainilla canela cremosa · Relajante y muy suave</div></div></div></div>
+    </div>
+    <div class="popup-note">Pregunta por strains disponibles esta semana</div>
+    <button class="popup-close" onclick="closePopup('jeeters')">Cerrar</button>
+  </div></div>
+</div>
+
+<!-- BOUTIQ -->
+<div class="overlay" id="popup-boutiq" onclick="closeOnOverlay(event,'boutiq')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">Boutiq Switch V5</div>
+    <div class="popup-sub">2G · 3 STRAINS · 92.88% THC · LIQUID LIVE DIAMONDS</div>
+    <div class="popup-desc">Triple tank all-in-one. Display digital. USB-C recargable. Cambia entre strains o combínalos todos.</div>
+    <div class="popup-price-row"><span class="pl">2G · Triple strain</span><span class="pr">$850</span></div>
+    <div style="background:#0d0d20;border:1px solid #3fbf7520;border-radius:8px;padding:10px 12px;margin-bottom:14px">
+      <div style="font-size:9px;color:var(--g);letter-spacing:1px;margin-bottom:6px">MODOS</div>
+      <div style="font-size:11px;color:#888;line-height:1.8">1 click → Italian Ice &nbsp;·&nbsp; 2 clicks → Lemon Cherry<br>3 clicks → Z-Runtz &nbsp;·&nbsp; 5 clicks → Infinity Mode (los 3 🔥)</div>
+    </div>
+    <div class="strains-title">Los 3 strains</div>
+    <div class="strain-list">
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-15.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Italian Ice</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Cremoso, berry-cítrico, fresco · Relajación con claridad mental</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-16.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Lemon Cherry</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Cítrico ácido, cherry ácido · Eufórico y energizante</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-17.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Z-Runtz</div><div class="strain-type">Índica</div></div><div class="strain-desc">Candy dulce, Zkittlez · Calma profunda, relajación corporal</div></div></div></div>
+    </div>
+    <button class="popup-close" onclick="closePopup('boutiq')">Cerrar</button>
+  </div></div>
+</div>
+
+<!-- FRYD 2G -->
+<div class="overlay" id="popup-fryd2" onclick="closeOnOverlay(event,'fryd2')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">Fryd Extracts 2G</div>
+    <div class="popup-sub">2G · LIQUID BATTER + LIVE RESIN · 85-95% THC · + 5 GUMMIES 10MG</div>
+    <div class="popup-desc">Liquid batter preserva el espectro completo. Live resin de planta fresca. Incluye 5 gummies de 10mg de regalo. USB-C recargable.</div>
+    <div class="popup-price-row"><span class="pl">2G + gummies incluidos</span><span class="pr">$900</span></div>
+    <div class="strains-title">Sabores disponibles</div>
+    <div class="strain-list">
+      
+      
+      
+      
+      
+    
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-04.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Meteor Mango</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Mango tropical dulce · Eufórico y relajante, el flagship de la línea</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-18.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Galactic Grape</div><div class="strain-type">Índica</div></div><div class="strain-desc">Uva cosmica intensa · Relajación profunda, ideal para la noche</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-19.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Strawberry Supernova</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Fresa espacial explosiva · Energía creativa con cuerpo relajado</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-20.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Cosmic Cherry Kush</div><div class="strain-type">Índica</div></div><div class="strain-desc">Cherry oscuro y terroso · Calma total, sleep mode activado</div></div></div></div>
+    </div>
+    <div class="popup-note">Sabores rotan · Pregunta por stock esta semana</div>
+    <button class="popup-close" onclick="closePopup('fryd2')">Cerrar</button>
+  </div></div>
+</div>
+
+<!-- FRYD 3G -->
+<div class="overlay" id="popup-fryd3" onclick="closeOnOverlay(event,'fryd3')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">Fryd Extracts 3G</div>
+    <div class="popup-sub">3G · LIQUID BATTER + LIVE RESIN · 85% THC · +4000 PUFFS · + 5 GUMMIES 10MG</div>
+    <div class="popup-desc">Triple de duración que un vape normal. Incluye 5 gummies de 10mg de regalo. USB-C recargable.</div>
+    <div class="popup-price-row"><span class="pl">3G + gummies incluidos</span><span class="pr">$1,000</span></div>
+    <div class="strains-title">Todos los sabores</div>
+    <div class="strain-list">
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-21.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Meteor Mango</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Mango tropical cremoso · Energizante + relajación corporal</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-21.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Galactic Grape</div><div class="strain-type">Índica</div></div><div class="strain-desc">Uva intensa, dulce · Relajación profunda</div></div></div></div>
+      
+      
+      
+      
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-21.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Cosmic Cherry Kush</div><div class="strain-type">Índica</div></div><div class="strain-desc">Cherry rico, Kush deep · Noche perfecta</div></div></div></div>
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-21.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Strawberry Supernova</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Fresa cremosa, dulce · Equilibrado y relajante</div></div></div></div>
+    </div>
+    <div class="popup-note">Pregunta por sabores en stock esta semana</div>
+    <button class="popup-close" onclick="closePopup('fryd3')">Cerrar</button>
+  </div></div>
+</div>
+
+<!-- BIG CHIEF -->
+<div class="overlay" id="popup-bigchief" onclick="closeOnOverlay(event,'bigchief')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">Big Chief DUO</div>
+    <div class="popup-sub">2G · 2 STRAINS · LIQUID DIAMONDS · LEFT & RIGHT SIDE</div>
+    <div class="popup-desc">Un dispositivo, dos strains. Indica left, Sativa right. Draw-activated. Liquid diamonds para máxima pureza.</div>
+    <div class="popup-price-row"><span class="pl">2G dual strain</span><span class="pr">$850</span></div>
+    <div class="strains-title">Combo actual</div>
+    <div class="strain-list">
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-05.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Frozen Cherries ← Left</div><div class="strain-type">Índica</div></div><div class="strain-desc">Cherry icy, frosted dulce · Calma profunda</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-22.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-sativa"></div><div class="strain-name">Raspberry Parfait → Right</div><div class="strain-type">Sativa</div></div><div class="strain-desc">Frambuesa cremosa, vainilla · Energía y euforia</div></div></div></div>
+    </div>
+    <div style="background:#111728;border:1px solid #c8a84b30;border-radius:8px;padding:10px 12px;margin-top:12px">
+      <div style="font-size:10px;color:#c8a84b;margin-bottom:6px;letter-spacing:1px">OTROS COMBOS</div>
+      <div style="font-size:11px;color:#888;line-height:1.8">Mango Tango (S) × Cherry Fritter (I)<br>Rainbow Belts (H) × Zoap (H)<br>Hella Jelly (S) × Juice Man (S)<br>Guava Pop (S) × Blackberry Jam (I)</div>
+    </div>
+    <div class="popup-note">Pregunta qué combo tenemos esta semana</div>
+    <button class="popup-close" onclick="closePopup('bigchief')">Cerrar</button>
+  </div></div>
+</div>
+
+<!-- MUHAMED -->
+<div class="overlay" id="popup-muhamed" onclick="closeOnOverlay(event,'muhamed')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">MuhaMed</div>
+    <div class="popup-sub">2G · LIVE RESIN · DISPOSABLE</div>
+    <div class="popup-price-row"><span class="pl">2G disposable</span><span class="pr">$850</span></div>
+    <div class="strains-title">Sabores</div>
+    <div class="strain-list">
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-23.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Banana OG</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Banana tropical, suave, relajante</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-24.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Pineapple Express</div><div class="strain-type">Índica</div></div><div class="strain-desc">Piña cítrica, suave, relajante</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-25.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-sativa"></div><div class="strain-name">Strawberry Cough</div><div class="strain-type">Sativa</div></div><div class="strain-desc">Fresa herbal, energizante, sociable</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-06.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Blue Dream</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Arándano dulce, equilibrado, creativo</div></div></div></div>
+    </div>
+    <div class="popup-note">Pregunta por sabores disponibles esta semana</div>
+    <button class="popup-close" onclick="closePopup('muhamed')">Cerrar</button>
+  </div></div>
+</div>
+
+<!-- BESOS -->
+<div class="overlay" id="popup-besos" onclick="closeOnOverlay(event,'besos')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">Besos</div>
+    <div class="popup-sub">2G · LIQUID DIAMONDS · PREMIUM DISPOSABLE</div>
+    <div class="popup-price-row"><span class="pl">2G disposable</span><span class="pr">$850</span></div>
+    <div class="strains-title">Sabores</div>
+    <div class="strain-list">
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-26.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Tres Leches</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Cremoso, vainilla, postre · Suave, equilibrado</div></div></div></div>
+      
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-27.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-sativa"></div><div class="strain-name">Strawberry Gelato</div><div class="strain-type">Sativa</div></div><div class="strain-desc">Fresa cremosa · Energizante</div></div></div></div>
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-28.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Horchata</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Vainilla canela · Suave y relajante</div></div></div></div>
+      
+      <div class="strain-item"><div class="strain-img-row"><img src="images/img-29.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Watermelon Kiss</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Sandía dulce, fresca · Equilibrado</div></div></div></div>
+      
+    </div>
+    <div class="popup-note">Pregunta por sabores en stock esta semana</div>
+    <button class="popup-close" onclick="closePopup('besos')">Cerrar</button>
+  </div></div>
+</div>
+
+<script>
+function openPopup(id){document.getElementById('popup-'+id).classList.add('active');document.body.style.overflow='hidden'}
+function closePopup(id){document.getElementById('popup-'+id).classList.remove('active');document.body.style.overflow=''}
+function closeOnOverlay(e,id){if(e.target===document.getElementById('popup-'+id))closePopup(id)}
+// ── Strain picker ────────────────────────────────────────────────
+var _spProduct = '', _spPrice = 0;
+
+var PRODUCT_STRAINS = {
+  'Sluggers Hit': [
+    {n:'Runtz',          t:'hybrid'},
+    {n:'Rainbow Road',   t:'sativa'},
+    {n:'Euphoria',       t:'hybrid'},
+    {n:'Horchata',       t:'hybrid'},
+  ],
+  'Baby Jeeter': [
+    {n:'Apple Fritter',      t:'hybrid'},
+    {n:'Watermelon Zkittlez',t:'indica'},
+    {n:'Maui Wowie',         t:'sativa'},
+    {n:'Horchata',           t:'hybrid'},
+  ],
+  'Boutiq Switch V5': [
+    {n:'Italian Ice',  t:'hybrid'},
+    {n:'Lemon Cherry', t:'hybrid'},
+    {n:'Z-Runtz',      t:'indica'},
+  ],
+  'Fryd 2G': [
+    {n:'Meteor Mango',        t:'hybrid'},
+    {n:'Galactic Grape',      t:'indica'},
+    {n:'Strawberry Supernova',t:'hybrid'},
+    {n:'Cosmic Cherry Kush',  t:'indica'},
+  ],
+  'Fryd 3G': [
+    {n:'Meteor Mango',       t:'hybrid'},
+    {n:'Galactic Grape',     t:'indica'},
+    {n:'Strawberry Supernova',t:'hybrid'},
+    {n:'Cosmic Cherry Kush', t:'indica'},
+  ],
+  'Big Chief DUO': [
+    {n:'Frozen Cherries',   t:'indica'},
+    {n:'Raspberry Parfait', t:'sativa'},
+  ],
+  'MuhaMed': [
+    {n:'Banana OG',        t:'hybrid'},
+    {n:'Pineapple Express',t:'indica'},
+    {n:'Strawberry Cough', t:'sativa'},
+    {n:'Blue Dream',       t:'hybrid'},
+  ],
+  'Besos': [
+    {n:'Tres Leches',      t:'hybrid'},
+    {n:'Horchata',         t:'hybrid'},
+    {n:'Watermelon Kiss',  t:'hybrid'},
+    {n:'Strawberry Gelato',t:'sativa'},
+  ],
+};
+
+var SP_EMOJI = {sativa:'☀️', indica:'🌙', hybrid:'🌿'};
+var SP_DOT   = {sativa:'dot-sativa', indica:'dot-indica', hybrid:'dot-hybrid'};
+var SP_TYPE  = {sativa:'Sativa', indica:'Índica', hybrid:'Híbrido'};
+
+function pickStrain(product, price) {
+  _spProduct = product;
+  _spPrice   = price;
+  var strains = PRODUCT_STRAINS[product] || [];
+  document.getElementById('sp-title').textContent = product.toUpperCase();
+  document.getElementById('sp-sub').textContent   = 'Elige el strain · $' + price.toLocaleString();
+  document.getElementById('sp-list').innerHTML = strains.map(function(s) {
+    var safe = s.n.replace(/'/g,"\'");
+    return '<div class="sp-strain-item" onclick="spAddStrain(\''+safe+'\')"> '
+      +'<div class="sp-img type-'+s.t[0]+'">'+SP_EMOJI[s.t]+'</div>'
+      +'<div class="strain-content">'
+        +'<div class="strain-top">'
+          +'<div class="strain-dot '+SP_DOT[s.t]+'"></div>'
+          +'<div class="strain-name">'+s.n+'</div>'
+          +'<div class="strain-type">'+SP_TYPE[s.t]+'</div>'
+        +'</div>'
+        +'<div class="strain-desc">Toca para agregar al carrito</div>'
+      +'</div>'
+      +'<div class="sp-add-pill">+</div>'
+    +'</div>';
+  }).join('');
+  document.getElementById('sp-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function spAddStrain(strainName) {
+  addToCart(_spProduct + ' · ' + strainName, _spPrice);
+  spClose();
+}
+
+function spClose() {
+  document.getElementById('sp-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function spCloseOnOverlay(e) {
+  if (e.target === document.getElementById('sp-overlay')) spClose();
+}
+
+</script>
+
+<!-- STRAIN PICKER -->
+<div id="sp-overlay" onclick="spCloseOnOverlay(event)">
+  <div id="sp-popup">
+    <div class="popup-handle"></div>
+    <div class="popup-body">
+      <div id="sp-title">ELIGE TU STRAIN</div>
+      <div id="sp-sub">Selecciona el sabor que quieres</div>
+      <div id="sp-list"></div>
+    </div>
+    <button class="popup-close" onclick="spClose()">Cancelar</button>
+  </div>
+</div>
+<!-- FLOATING CART -->
+<div id="cart-bubble" onclick="toggleCart()">0</div>
+<div id="cart-float">
+  <div class="cf-header">CARRITO <button class="cf-close" onclick="toggleCart()">×</button></div>
+  <div class="cf-items"></div>
+  <div class="cf-total">Total <span>$0</span></div>
+  <button class="cf-send" onclick="sendOrder()">📲 Enviar pedido por WhatsApp</button>
+  <button class="cf-clear" onclick="clearCart()">Vaciar carrito</button>
+</div>
+
+<script>
+// ── Cart ─────────────────────────────────────────────────────────
+var cart = {};
+
+function addToCart(name, price) {
+  cart[name] = cart[name] ? {qty: cart[name].qty+1, price:price} : {qty:1, price:price};
+  renderCart();
+  var fl = document.getElementById('cart-float');
+  fl.classList.add('show');
+  setTimeout(function(){if(Object.keys(cart).length)fl.classList.add('show')},10);
+}
+
+function removeFromCart(name) {
+  if (!cart[name]) return;
+  if (cart[name].qty > 1) cart[name].qty--;
+  else delete cart[name];
+  renderCart();
+}
+
+function clearCart() {
+  cart = {};
+  renderCart();
+  document.getElementById('cart-float').classList.remove('show');
+}
+
+function toggleCart() {
+  var fl = document.getElementById('cart-float');
+  fl.classList.toggle('show');
+}
+
+function renderCart() {
+  var keys = Object.keys(cart);
+  var total = 0, count = 0;
+  keys.forEach(function(n){ total += cart[n].qty * cart[n].price; count += cart[n].qty; });
+  var bubble = document.getElementById('cart-bubble');
+  bubble.textContent = count;
+  bubble.classList.toggle('show', count > 0);
+  var itemsEl = document.querySelector('.cf-items');
+  itemsEl.innerHTML = keys.map(function(n) {
+    var it = cart[n];
+    return '<div class="cf-item"><span class="cf-name">'+n+'</span><span class="cf-qty">×'+it.qty+' $'+(it.qty*it.price).toLocaleString()+'</span><button class="cf-rm" onclick="removeFromCart(\''+n.replace(/'/g,"\\'")+'\')" >×</button></div>';
+  }).join('');
+  document.querySelector('.cf-total').innerHTML = 'Total <span>$'+total.toLocaleString()+'</span>';
+}
+
+function sendOrder() {
+  var keys = Object.keys(cart);
+  if (!keys.length) return;
+  var lines = keys.map(function(n){return '• '+n+' ×'+cart[n].qty+' = $'+(cart[n].qty*cart[n].price).toLocaleString();});
+  var total = Object.values(cart).reduce(function(s,v){return s+v.qty*v.price;},0);
+  var msg = 'Hola GasShopColima! 🌿 Mi pedido:\n\n'+lines.join('\n')+'\n\n*Total estimado: $'+total.toLocaleString()+' MXN*\n\n¿Me puedes dar la dirección de entrega?';
+  window.open('https://wa.me/523121079351?text='+encodeURIComponent(msg),'_blank');
+}
+
+// ── Share ─────────────────────────────────────────────────────────
+function shareProduct(name) {
+  if (navigator.share) {
+    navigator.share({title:'GasShopColima 🌿', text:'Mira: '+name, url:window.location.href}).catch(function(){});
+  } else {
+    navigator.clipboard && navigator.clipboard.writeText(window.location.href).then(function(){
+      alert('Link copiado 📋');
+    });
+  }
+}
+
+// ── FAQ ───────────────────────────────────────────────────────────
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ── Filter ────────────────────────────────────────────────────────
+// Strain database keyed by type
+var STRAINS = {
+  sativa: [
+    {n:'Rainbow Road',     p:'Sluggers Hit'},
+    {n:'Maui Wowie',       p:'Baby Jeeter'},
+    {n:'Raspberry Parfait',p:'Big Chief DUO'},
+    {n:'Strawberry Cough', p:'MuhaMed'},
+    {n:'Strawberry Gelato',p:'Besos'},
+  ],
+  indica: [
+    {n:'Watermelon Zkittlez',p:'Baby Jeeter'},
+    {n:'Z-Runtz',          p:'Boutiq Switch V5'},
+    {n:'Galactic Grape',   p:'Fryd 2G'},
+    {n:'Cosmic Cherry Kush',p:'Fryd 2G'},
+    {n:'Frozen Cherries',  p:'Big Chief DUO'},
+    {n:'Pineapple Express',p:'MuhaMed'},
+  ],
+  hybrid: [
+    {n:'Runtz',             p:'Sluggers Hit'},
+    {n:'Euphoria',          p:'Sluggers Hit'},
+    {n:'Horchata',          p:'Sluggers Hit / Jeeter / Besos'},
+    {n:'Apple Fritter',     p:'Baby Jeeter'},
+    {n:'Italian Ice',       p:'Boutiq Switch V5'},
+    {n:'Lemon Cherry',      p:'Boutiq Switch V5'},
+    {n:'Meteor Mango',      p:'Fryd 2G'},
+    {n:'Strawberry Supernova',p:'Fryd 2G'},
+    {n:'Banana OG',         p:'MuhaMed'},
+    {n:'Blue Dream',        p:'MuhaMed'},
+    {n:'Tres Leches',       p:'Besos'},
+    {n:'Watermelon Kiss',   p:'Besos'},
+  ],
+};
+var TYPE_COLOR = {sativa:'#ffdd44', indica:'#9b59b6', hybrid:'#3fbf75'};
+
+function filterPlumas(btn, type) {
+  document.querySelectorAll('.ftab').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  var panel = document.getElementById('strain-panel');
+  var list  = document.getElementById('strain-list');
+  if (type === 'all') {
+    panel.classList.remove('show');
+    list.innerHTML = '';
+    return;
+  }
+  var col    = TYPE_COLOR[type] || '#fff';
+  var items  = STRAINS[type] || [];
+  list.innerHTML = items.map(function(s){
+    var msg = encodeURIComponent('Hola GasShopColima! 🌿 ¿Tienen disponible el strain '+s.n+' del '+s.p+'? $'+s.pr);
+    return '<a class="strain-chip" href="https://wa.me/523121079351?text='+msg+'" target="_blank">'
+      +'<span class="sc-dot" style="background:'+col+'"></span>'
+      +'<span class="sc-name">'+s.n+'</span>'
+      +'<span class="sc-prod">'+s.p+'</span>'
+      +'</a>';
+  }).join('');
+  panel.classList.add('show');
+}
+
+// ── Horario ───────────────────────────────────────────────────────
+function updateHorario() {
+  var bar = document.getElementById('horario-bar');
+  if (!bar) return;
+  var h = new Date().getHours();
+  if (h >= 10 && h < 20) {
+    bar.className = 'open';
+    bar.textContent = '● ABIERTO AHORA · Pedidos activos';
+  } else {
+    bar.className = 'closed';
+    bar.textContent = '● CERRADO · Abrimos a las 10am';
+  }
+}
+updateHorario();
+setInterval(updateHorario, 60000);
+
+// ── Stats counter ─────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.querySelectorAll('[data-to]').forEach(function(el) {
+      var target  = parseFloat(el.dataset.to);
+      var from    = parseFloat(el.dataset.from || '0');
+      var suffix  = el.dataset.suf || '';
+      var dec     = String(el.dataset.to).includes('.') ? 1 : 0;
+      var t0      = performance.now();
+      var dur     = 1800;
+      (function tick(now) {
+        var p = Math.min((now - t0) / dur, 1);
+        var e = 1 - Math.pow(1-p, 3);
+        el.textContent = (from + (target-from)*e).toFixed(dec) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = target.toFixed(dec) + suffix;
+      })(t0);
+    });
+  }, 400);
+});
+
+</script>
+</body>
+</html>

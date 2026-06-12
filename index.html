@@ -359,13 +359,14 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
 
 
 <div class="combo-section">
-  <div class="combo-eyebrow">Oferta del día</div>
-  <div class="combo-title">Baby Jeeter + Indoor ½ oz</div>
+  <div class="combo-eyebrow">Oferta del día · Solo hoy</div>
+  <div class="combo-title">2 Plumas Premium<br>a tu elección</div>
+  <div style="font-size:11px;color:#888;margin-bottom:10px;line-height:1.5">Boutiq, Fryd 2G, Big Chief, MuhaMed o Besos<br>El sabor que quieras de cada una</div>
   <div class="combo-price-line">
-    <div class="big">$1,100</div>
-    <div class="save">Ahorras $150</div>
+    <div class="big">$1,500</div>
+    <div class="save">Ahorras $200 · Valor normal $1,700</div>
   </div>
-  <a class="combo-wa" href="https://wa.me/523121079351?text=Hola%20GasShopColima!%20%F0%9F%8C%BF%20Quiero%20el%20Combo%20del%20D%C3%ADa%3A%20Baby%20Jeeter%20%2B%20Indoor%20%C2%BD%20oz%20%3D%20%241%2C100%20%F0%9F%94%A5" target="_blank">
+  <a class="combo-wa" href="https://wa.me/523121079351?text=Hola%20GasShopColima!%20Quiero%20el%20combo%20de%202%20plumas%20a%20%241%2C500%20%F0%9F%94%A5%20%C2%BFcu%C3%A1les%20tienen%20disponibles%3F" target="_blank">
     <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.554 4.112 1.522 5.84L.057 23.882l6.204-1.628A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.838 0-3.568-.494-5.063-1.358l-.363-.215-3.683.966.983-3.595-.236-.371A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
     Quiero este combo
   </a>
@@ -374,16 +375,28 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
 <!-- PREROLADOS -->
 <div class="section">
   <div class="section-header"><span class="section-label">Prerolados</span><div class="section-line"></div></div>
-  <div class="highlight-card">
+  <div class="highlight-card" onclick="openPopup('gallitos')" style="cursor:pointer">
     <div class="info"><div class="name">Gallitos Premium</div><div class="detail">Bolsa 36 KingSize · Mejor precio</div></div>
-    <div class="amount">$1,500</div>
-  <button class="btn-add-pr" onclick="addToCart('Gallitos Premium',1500)" title="Agregar">+</button>
+    <div style="display:flex;align-items:center;gap:8px"><div class="amount">$1,500</div><span style="font-size:11px;color:#555">Ver →</span></div>
   </div>
   <div class="price-row" style="margin-bottom:8px"><span class="label">Gallito individual</span><span class="amount"><span class="sym">$</span>75</span><button class="btn-add-pr" onclick="event.stopPropagation();addToCart('Gallito individual',75)" title="Agregar">+</button></div>
-  <video autoplay muted loop playsinline webkit-playsinline style="width:100%;border-radius:10px;margin:10px 0 12px;display:block"><source src="images/video-01.mp4" type="video/mp4"></video>
   <div class="product-grid" style="margin-top:6px">
 
-    <!-- SLUGGERS -->
+    
+<!-- GALLITOS PREMIUM -->
+<div class="overlay" id="popup-gallitos" onclick="closeOnOverlay(event,'gallitos')">
+  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
+    <div class="popup-title">Gallitos Premium</div>
+    <div class="popup-sub">BOLSA 36 KINGSIZE &middot; MEJOR PRECIO DEL MERCADO</div>
+    <div class="popup-desc">La bolsa con más joints por tu dinero. KingSize premium al mejor precio en paquete.</div>
+    <div class="popup-price-row"><span class="pl">Bolsa 36 KingSize</span><span class="pr">$1,500</span></div>
+    <div class="popup-price-row" style="margin-top:6px"><span class="pl">Gallito individual</span><span class="pr">$75</span></div>
+    <video muted playsinline controls preload="metadata" style="width:100%;border-radius:10px;margin:14px 0 4px"><source src="images/video-01.mp4" type="video/mp4"></video>
+    <div class="popup-note">Pregunta disponibilidad &middot; Entrega con Rappi</div>
+    <button class="popup-close" onclick="closePopup('gallitos')">Cerrar</button>
+  </div></div>
+</div>
+<!-- SLUGGERS -->
     <div class="product-card" onclick="openPopup('sluggers')" style="grid-column:1/-1;position:relative" data-product="Sluggers Hit" data-price="850" data-types="sativa indica hybrid"><button class="btn-add" onclick="event.stopPropagation();pickStrain('Sluggers Hit',850)" title="Agregar al carrito">+</button><button class="btn-share" onclick="event.stopPropagation();shareProduct('Sluggers Hit')" title="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
       <div style="display:flex;overflow:hidden;border-radius:12px 12px 0 0">
         <img src="images/img-01.webp" onerror="this.style.display='none'" style="width:50%;height:220px;object-fit:contain;background:#080808">

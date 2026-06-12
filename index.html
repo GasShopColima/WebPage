@@ -533,9 +533,29 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
 </div>
 
 <!-- DELIVERY + INFO -->
-<div class="delivery-row" style="margin-top:20px">
-  <div style="font-size:18px">🛵</div>
-  <p><strong>Entregamos en:</strong> Colima, Villa de Álvarez y alrededores</p>
+<div style="margin:16px 14px 0;display:flex;flex-direction:column;gap:6px">
+  <div style="background:#111814;border:1px solid #3fbf7530;border-radius:10px;padding:13px 15px">
+    <div style="font-size:10px;color:#3fbf75;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Zona de entrega</div>
+    <div style="font-size:12px;color:#ccc;line-height:1.7">
+      Colima Centro · Villa de Álvarez · Jardines de Vista Hermosa<br>
+      La Estancia · Camichines · Residencial Arboledas<br>
+      Y más colonias — <span style="color:#3fbf75">pregunta si llegamos a tu zona</span>
+    </div>
+  </div>
+  <div style="display:flex;gap:6px">
+    <div style="flex:1;background:#111814;border:1px solid #3fbf7530;border-radius:10px;padding:11px 13px;text-align:center">
+      <div style="font-size:10px;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px">Pedido mínimo</div>
+      <div style="font-size:15px;font-weight:700;color:#3fbf75">Sin mínimo</div>
+    </div>
+    <div style="flex:1;background:#111814;border:1px solid #3fbf7530;border-radius:10px;padding:11px 13px;text-align:center">
+      <div style="font-size:10px;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px">Entrega</div>
+      <div style="font-size:15px;font-weight:700;color:#3fbf75">30–45 min</div>
+    </div>
+    <div style="flex:1;background:#111814;border:1px solid #3fbf7530;border-radius:10px;padding:11px 13px;text-align:center">
+      <div style="font-size:10px;color:#555;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px">Repartidor</div>
+      <div style="font-size:15px;font-weight:700;color:#3fbf75">Rappi</div>
+    </div>
+  </div>
 </div>
 <div class="info-bar">
   <div class="info-item"><div class="info-icon">📱</div><div class="info-text"><div class="it">WhatsApp / Llamadas</div><div class="iv"><span class="green">312 107 9351</span></div></div></div>
@@ -689,30 +709,6 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
   </div></div>
 </div>
 
-<!-- FRYD 3G -->
-<div class="overlay" id="popup-fryd3" onclick="closeOnOverlay(event,'fryd3')">
-  <div class="popup"><div class="popup-handle"></div><div class="popup-body">
-    <div class="popup-title">Fryd Extracts 3G</div>
-    <div class="popup-sub">3G · LIQUID BATTER + LIVE RESIN · 85% THC · +4000 PUFFS · + 5 GUMMIES 10MG</div>
-    <div class="popup-desc">Triple de duración que un vape normal. Incluye 5 gummies de 10mg de regalo. USB-C recargable.</div>
-    <div class="popup-price-row"><span class="pl">3G + gummies incluidos</span><span class="pr">$1,000</span></div>
-    <div class="strains-title">Todos los sabores</div>
-    <div class="strain-list">
-      <div class="strain-item"><div class="strain-img-row"><img src="images/img-21.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Meteor Mango</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Mango tropical cremoso · Energizante + relajación corporal</div></div></div></div>
-      <div class="strain-item"><div class="strain-img-row"><img src="images/img-21.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Galactic Grape</div><div class="strain-type">Índica</div></div><div class="strain-desc">Uva intensa, dulce · Relajación profunda</div></div></div></div>
-      
-      
-      
-      
-      
-      <div class="strain-item"><div class="strain-img-row"><img src="images/img-21.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Cosmic Cherry Kush</div><div class="strain-type">Índica</div></div><div class="strain-desc">Cherry rico, Kush deep · Noche perfecta</div></div></div></div>
-      
-      <div class="strain-item"><div class="strain-img-row"><img src="images/img-21.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Strawberry Supernova</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Fresa cremosa, dulce · Equilibrado y relajante</div></div></div></div>
-    </div>
-    <div class="popup-note">Pregunta por sabores en stock esta semana</div>
-    <button class="popup-close" onclick="closePopup('fryd3')">Cerrar</button>
-  </div></div>
-</div>
 
 <!-- BIG CHIEF -->
 <div class="overlay" id="popup-bigchief" onclick="closeOnOverlay(event,'bigchief')">
@@ -807,12 +803,6 @@ var PRODUCT_STRAINS = {
     {n:'Galactic Grape',      t:'indica'},
     {n:'Strawberry Supernova',t:'hybrid'},
     {n:'Cosmic Cherry Kush',  t:'indica'},
-  ],
-  'Fryd 3G': [
-    {n:'Meteor Mango',       t:'hybrid'},
-    {n:'Galactic Grape',     t:'indica'},
-    {n:'Strawberry Supernova',t:'hybrid'},
-    {n:'Cosmic Cherry Kush', t:'indica'},
   ],
   'Big Chief DUO': [
     {n:'Frozen Cherries',   t:'indica'},

@@ -221,10 +221,10 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
 /* contenedor split (boutiq, fryd, sluggers, jeeters, bigchief) */
 #plumas-grid .product-card>div[style*="overflow:hidden"]{
   height:220px!important;overflow:hidden!important}
-/* imagen izquierda (50%): contain para no aplastar */
+/* imagen izquierda (50%): cover para llenar sin barras */
 #plumas-grid .product-card>div[style*="overflow:hidden"]>img{
   height:220px!important;width:50%!important;flex-shrink:0!important;
-  object-fit:contain!important;background:#080808!important;
+  object-fit:cover!important;background:#080808!important;
   aspect-ratio:unset!important;object-position:center!important}
 /* panel derecho (precio/info) también 220px */
 #plumas-grid .product-card>div[style*="overflow:hidden"]>div{

@@ -279,6 +279,29 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
 .ag-no{width:100%;background:transparent;border:1px solid #2a2a2a;color:#666;border-radius:11px;padding:13px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer}
 .ag-legal{font-size:10px;color:#444;line-height:1.5;margin-top:18px}
 
+/* ── CHECKOUT MODAL ── */
+#co-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:400;align-items:flex-end;justify-content:center}
+#co-overlay.active{display:flex}
+#co-popup{background:#111;border:1px solid #3fbf7530;border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:92vh;overflow-y:auto;padding:0 0 36px;animation:slideUp .22s ease}
+.co-body{padding:16px 16px 0}
+.co-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--g);margin-bottom:14px}
+.co-summary{background:#0a0a0a;border:1px solid #1e1e1e;border-radius:10px;padding:12px 14px;margin-bottom:16px}
+.co-item{font-size:12px;color:#ccc;padding:4px 0;border-bottom:1px solid #1a1a1a}
+.co-item:last-child{border-bottom:none;padding-bottom:0}
+.co-total{font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--g);margin-top:10px}
+.co-field{margin-bottom:13px}
+.co-field label{display:block;font-size:10px;letter-spacing:1.5px;color:#888;text-transform:uppercase;margin-bottom:6px}
+.co-field input,.co-field textarea{width:100%;background:#0a0a0a;border:1px solid #2a2a2a;border-radius:8px;padding:11px 12px;color:#fff;font-size:13px;outline:none;box-sizing:border-box;-webkit-appearance:none;font-family:'Inter',sans-serif}
+.co-field input:focus,.co-field textarea:focus{border-color:var(--g)}
+.co-field textarea{resize:none;height:64px}
+.co-radios{display:flex;gap:8px}
+.co-radio{flex:1;background:#0a0a0a;border:1px solid #2a2a2a;border-radius:8px;padding:11px 10px;cursor:pointer;text-align:center;font-size:12px;color:#666;transition:all .15s;-webkit-tap-highlight-color:transparent}
+.co-radio.selected{border-color:var(--g);color:var(--g);background:#0d1a0f}
+.co-btn{display:block;width:100%;background:var(--g);color:#000;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;padding:16px;border:none;border-radius:12px;cursor:pointer;margin:16px 0 8px}
+.co-cancel{display:block;width:100%;background:transparent;color:#444;font-size:13px;padding:10px;border:none;cursor:pointer}
+.co-req{color:#e05;font-size:10px;margin-left:4px;display:none}
+.co-req.show{display:inline}
+
 </style>
 </head>
 <body>
@@ -384,10 +407,10 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
     <div class="big">$1,500</div>
     <div class="save">Ahorras $200 · Valor normal $1,700</div>
   </div>
-  <a class="combo-wa" href="https://wa.me/523121079351?text=Hola%20GasShopColima!%0A%0APEDIDO%3A%0A%E2%80%A2%20Combo%202%20Plumas%20Premium%20x1%20%3D%20%241%2C500%20MXN%0A%0A---%0AMetodo%20de%20pago%3A%0A%5B%20%5D%20Transferencia%0A%5B%20%5D%20Efectivo%20(solo%20sucursales%20seleccionadas)%0A%0APlumas%20que%20quiero%3A%0A1.%20%5Bescribe%20pluma%20y%20strain%5D%0A2.%20%5Bescribe%20pluma%20y%20strain%5D%0A%0ADireccion%20de%20entrega%3A%0A%5Bescribe%20aqui%20tu%20direccion%20y%20colonia%5D%0A%0AReferencias%3A%20(opcional)%0A%5Bcolor%20de%20casa%2C%20numero%20de%20puerta%2C%20etc.%5D" target="_blank">
+  <button class="combo-wa" onclick="openCheckoutDirect('Combo 2 Plumas Premium', 1500, 'Plumas y strains (ej: MuhaMed Berry Gelato + Besos Watermelon Kiss)')" style="border:none;cursor:pointer">
     <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.554 4.112 1.522 5.84L.057 23.882l6.204-1.628A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.838 0-3.568-.494-5.063-1.358l-.363-.215-3.683.966.983-3.595-.236-.371A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
     Quiero este combo
-  </a>
+  </button>
 </div>
 
 <div class="combo-section" style="margin-top:10px;background:linear-gradient(135deg,#1a1200,#111500);border-color:#c8a84b45">
@@ -399,10 +422,10 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
     <div class="big" style="color:#c8a84b">$699</div>
     <div class="save">Ahorras $101 · Valor normal $800</div>
   </div>
-  <a class="combo-wa" style="background:#c8a84b;color:#111" href="https://wa.me/523121079351?text=Hola%20GasShopColima!%0A%0APEDIDO%3A%0A%E2%80%A2%20Pack%20Surtido%20(1%20OZ%20Flor%20Estandar%20%2B%20%C2%BD%20OZ%20Outdoor)%20x1%20%3D%20%24699%20MXN%0A%0AStrains%20que%20quiero%3A%0A-%20Flor%20Estandar%3A%20%5Bescribe%20el%20strain%5D%0A-%20Outdoor%3A%20%5Bescribe%20el%20strain%5D%0A%0A---%0AMetodo%20de%20pago%3A%0A%5B%20%5D%20Transferencia%0A%5B%20%5D%20Efectivo%20(solo%20sucursales%20seleccionadas)%0A%0ADireccion%20de%20entrega%3A%0A%5Bescribe%20aqui%20tu%20direccion%20y%20colonia%5D%0A%0AReferencias%3A%20(opcional)%0A%5Bcolor%20de%20casa%2C%20numero%20de%20puerta%2C%20etc.%5D" target="_blank">
+  <button class="combo-wa" style="background:#c8a84b;color:#111;border:none;cursor:pointer" onclick="openCheckoutDirect('Pack Surtido - 1 OZ Flor Estandar + 1/2 OZ Outdoor', 699, 'Strains que quieres (Flor Estandar y Outdoor)')" >
     <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.554 4.112 1.522 5.84L.057 23.882l6.204-1.628A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.838 0-3.568-.494-5.063-1.358l-.363-.215-3.683.966.983-3.595-.236-.371A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
     Quiero este pack
-  </a>
+  </button>
 </div>
 
 <!-- PREROLADOS -->
@@ -931,6 +954,49 @@ function spCloseOnOverlay(e) {
     <button class="popup-close" onclick="spClose()">Cancelar</button>
   </div>
 </div>
+<!-- CHECKOUT MODAL -->
+<div id="co-overlay" onclick="coCloseOnOverlay(event)">
+  <div id="co-popup">
+    <div class="popup-handle"></div>
+    <div class="co-body">
+      <div class="co-title">Confirmar Pedido</div>
+      <div class="co-summary">
+        <div id="co-items"></div>
+        <div class="co-total" id="co-total-display"></div>
+      </div>
+      <div class="co-field">
+        <label>Metodo de pago</label>
+        <div class="co-radios">
+          <div class="co-radio selected" id="co-pay-transfer" onclick="selectPago('Transferencia')">Transferencia</div>
+          <div class="co-radio" id="co-pay-cash" onclick="selectPago('Efectivo (sucursal)')">Efectivo (sucursal)</div>
+        </div>
+      </div>
+      <div class="co-field">
+        <label>Tu nombre <span class="co-req" id="req-nombre">requerido</span></label>
+        <input type="text" id="co-nombre" placeholder="Con quien preguntamos?">
+      </div>
+      <div class="co-field">
+        <label>Calle y numero <span class="co-req" id="req-calle">requerido</span></label>
+        <input type="text" id="co-calle" placeholder="Ej: Av. Ninos Heroes 123">
+      </div>
+      <div class="co-field">
+        <label>Colonia <span class="co-req" id="req-colonia">requerido</span></label>
+        <input type="text" id="co-colonia" placeholder="Ej: Centro, Jardines, Villas etc.">
+      </div>
+      <div class="co-field">
+        <label>Referencias <span style="font-size:10px;color:#555">(opcional)</span></label>
+        <textarea id="co-refs" placeholder="Color de casa, entre que calles, punto de referencia..."></textarea>
+      </div>
+      <div class="co-field" id="co-notas-wrap" style="display:none">
+        <label id="co-notas-label">Notas</label>
+        <textarea id="co-notas" placeholder=""></textarea>
+      </div>
+      <button class="co-btn" onclick="confirmOrder()">Enviar por WhatsApp</button>
+      <button class="co-cancel" onclick="closeCheckout()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
 <!-- FLOATING CART -->
 <div id="cart-bubble" onclick="toggleCart()">0</div>
 <div id="cart-float">
@@ -989,21 +1055,83 @@ function renderCart() {
 function sendOrder() {
   var keys = Object.keys(cart);
   if (!keys.length) return;
-  var lines = keys.map(function(n){return '• '+n+' x'+cart[n].qty+' = $'+(cart[n].qty*cart[n].price).toLocaleString()+' MXN';});
-  var total = Object.values(cart).reduce(function(s,v){return s+v.qty*v.price;},0);
+  var items = keys.map(function(n){ return {name:n, qty:cart[n].qty, price:cart[n].price}; });
+  var total = items.reduce(function(s,i){ return s+i.qty*i.price; }, 0);
+  openCheckout(items, total, '');
+}
+
+// ── Checkout Modal ────────────────────────────────────────────────
+var _coItems = [];
+var _coTotal = 0;
+var _coPago  = 'Transferencia';
+
+function openCheckout(items, total, notasLabel) {
+  _coItems = items;
+  _coTotal = total;
+  _coPago  = 'Transferencia';
+  document.getElementById('co-items').innerHTML = items.map(function(i){
+    return '<div class="co-item">• '+i.name+' x'+i.qty+' = $'+(i.qty*i.price).toLocaleString()+' MXN</div>';
+  }).join('');
+  document.getElementById('co-total-display').textContent = 'Total: $'+total.toLocaleString()+' MXN';
+  document.getElementById('co-pay-transfer').classList.add('selected');
+  document.getElementById('co-pay-cash').classList.remove('selected');
+  ['co-nombre','co-calle','co-colonia','co-refs'].forEach(function(id){ document.getElementById(id).value=''; });
+  ['req-nombre','req-calle','req-colonia'].forEach(function(id){ document.getElementById(id).classList.remove('show'); });
+  var wrap = document.getElementById('co-notas-wrap');
+  if (notasLabel) {
+    document.getElementById('co-notas-label').textContent = notasLabel;
+    document.getElementById('co-notas').value = '';
+    wrap.style.display = '';
+  } else {
+    wrap.style.display = 'none';
+  }
+  document.getElementById('co-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function openCheckoutDirect(name, price, notasLabel) {
+  openCheckout([{name:name, qty:1, price:price}], price, notasLabel||'');
+}
+
+function selectPago(tipo) {
+  _coPago = tipo;
+  document.getElementById('co-pay-transfer').classList.toggle('selected', tipo==='Transferencia');
+  document.getElementById('co-pay-cash').classList.toggle('selected', tipo==='Efectivo (sucursal)');
+}
+
+function closeCheckout() {
+  document.getElementById('co-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function coCloseOnOverlay(e) {
+  if (e.target===document.getElementById('co-overlay')) closeCheckout();
+}
+
+function confirmOrder() {
+  var nombre  = document.getElementById('co-nombre').value.trim();
+  var calle   = document.getElementById('co-calle').value.trim();
+  var colonia = document.getElementById('co-colonia').value.trim();
+  var refs    = document.getElementById('co-refs').value.trim();
+  var notas   = document.getElementById('co-notas').value.trim();
+  var ok = true;
+  if (!nombre)  { document.getElementById('req-nombre').classList.add('show');  document.getElementById('co-nombre').focus();  ok=false; }
+  if (!calle)   { document.getElementById('req-calle').classList.add('show');   if(ok) document.getElementById('co-calle').focus();   ok=false; }
+  if (!colonia) { document.getElementById('req-colonia').classList.add('show'); if(ok) document.getElementById('co-colonia').focus(); ok=false; }
+  if (!ok) return;
+  var lines = _coItems.map(function(i){
+    return '• '+i.name+' x'+i.qty+' = $'+(i.qty*i.price).toLocaleString()+' MXN';
+  });
   var msg = 'Hola GasShopColima!\n\n'
-    + 'PEDIDO:\n'
-    + lines.join('\n')
-    + '\n\nTotal: $'+total.toLocaleString()+' MXN\n\n'
-    + '---\n'
-    + 'Metodo de pago:\n'
-    + '[ ] Transferencia\n'
-    + '[ ] Efectivo (solo sucursales seleccionadas)\n\n'
-    + 'Direccion de entrega:\n'
-    + '[escribe aqui tu direccion y colonia]\n\n'
-    + 'Referencias: (opcional)\n'
-    + '[color de casa, numero de puerta, etc.]';
+    + 'PEDIDO:\n'+lines.join('\n')+'\n'
+    + 'Total: $'+_coTotal.toLocaleString()+' MXN\n\n'
+    + 'Pago: '+_coPago+'\n'
+    + 'Nombre: '+nombre+'\n'
+    + 'Direccion: '+calle+', Col. '+colonia
+    + (refs  ? '\nReferencias: '+refs  : '')
+    + (notas ? '\nNotas: '+notas : '');
   window.open('https://wa.me/523121079351?text='+encodeURIComponent(msg),'_blank');
+  closeCheckout();
 }
 
 // ── Share ─────────────────────────────────────────────────────────
@@ -1073,12 +1201,12 @@ function filterPlumas(btn, type) {
   var col    = TYPE_COLOR[type] || '#fff';
   var items  = STRAINS[type] || [];
   list.innerHTML = items.map(function(s){
-    var msg = encodeURIComponent('Hola GasShopColima!\n\nPEDIDO:\n• '+s.p+' - '+s.n+' x1 = $'+s.pr+' MXN\n\n---\nMetodo de pago:\n[ ] Transferencia\n[ ] Efectivo (solo sucursales seleccionadas)\n\nDireccion de entrega:\n[escribe aqui tu direccion y colonia]\n\nReferencias: (opcional)\n[color de casa, numero de puerta, etc.]');
-    return '<a class="strain-chip" href="https://wa.me/523121079351?text='+msg+'" target="_blank">'
+    var safeName = (s.p+' - '+s.n).replace(/'/g,"\\'");
+    return '<div class="strain-chip" style="cursor:pointer" onclick="openCheckoutDirect(\''+safeName+'\','+s.pr+')">'
       +'<span class="sc-dot" style="background:'+col+'"></span>'
       +'<span class="sc-name">'+s.n+'</span>'
       +'<span class="sc-prod">'+s.p+'</span>'
-      +'</a>';
+      +'</div>';
   }).join('');
   panel.classList.add('show');
 }

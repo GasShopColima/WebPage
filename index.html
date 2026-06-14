@@ -286,8 +286,8 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
 .suc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:4px}
 .suc-card{background:#fff;border-radius:10px;padding:12px 8px 8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:76px;border:2px solid transparent;transition:border-color .15s,transform .1s;-webkit-tap-highlight-color:transparent}
 .suc-card:active{transform:scale(.96)}
-.suc-logo-img{width:72px;height:36px;object-fit:contain}
-.suc-lbl{font-size:9px;color:#666;text-align:center;font-weight:600;letter-spacing:.2px}
+.suc-brand{color:#fff;font-family:Arial,sans-serif;font-weight:900;line-height:1}
+.suc-lbl{font-size:9px;color:#ffffff99;text-align:center;font-weight:600;letter-spacing:.2px}
 
 /* ── CHECKOUT MODAL ── */
 #co-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:400;align-items:flex-end;justify-content:center}
@@ -972,33 +972,33 @@ function spCloseOnOverlay(e) {
       <div style="font-size:10px;letter-spacing:2px;color:var(--g);text-transform:uppercase;margin-bottom:4px">Pago en efectivo</div>
       <div style="font-size:12px;color:#666;margin-bottom:16px;line-height:1.5">Selecciona donde quieres pagar — te mandamos el numero de referencia por WhatsApp.</div>
       <div class="suc-grid">
-        <div class="suc-card" onclick="selectSucursal('Kiosko')">
-          <img class="suc-logo-img" src="https://logo.clearbit.com/kiosko.com.mx" alt="Kiosko" onerror="this.style.display='none'">
-          <div class="suc-lbl">Kiosko</div>
+        <div class="suc-card" onclick="selectSucursal('Kiosko')" style="background:#e3000f">
+          <div class="suc-brand" style="font-size:18px">kiosko</div>
+          <div class="suc-lbl" style="color:#ffffff99">Conveniencia</div>
         </div>
-        <div class="suc-card" onclick="selectSucursal('BBVA')">
-          <img class="suc-logo-img" src="https://logo.clearbit.com/bbva.mx" alt="BBVA" onerror="this.style.display='none'">
-          <div class="suc-lbl">BBVA</div>
+        <div class="suc-card" onclick="selectSucursal('BBVA')" style="background:#004999">
+          <div class="suc-brand" style="font-size:22px">bbva</div>
+          <div class="suc-lbl" style="color:#ffffff99">Banco</div>
         </div>
-        <div class="suc-card" onclick="selectSucursal('Farmacias Guadalajara')">
-          <img class="suc-logo-img" src="https://logo.clearbit.com/farmaciasguadalajara.com" alt="Farmacias Guadalajara" onerror="this.style.display='none'">
-          <div class="suc-lbl">Farmacias GDL</div>
+        <div class="suc-card" onclick="selectSucursal('Farmacias Guadalajara')" style="background:#006B3F">
+          <div class="suc-brand" style="font-size:11px;text-align:center;line-height:1.3">FARMACIAS<br>GUADALAJARA</div>
+          <div class="suc-lbl" style="color:#ffffff99">Farmacia</div>
         </div>
-        <div class="suc-card" onclick="selectSucursal('Farmacias del Ahorro')">
-          <img class="suc-logo-img" src="https://logo.clearbit.com/fahorro.com" alt="Farmacias del Ahorro" onerror="this.style.display='none'">
-          <div class="suc-lbl">Del Ahorro</div>
+        <div class="suc-card" onclick="selectSucursal('Farmacias del Ahorro')" style="background:#cc0000">
+          <div class="suc-brand" style="font-size:11px;text-align:center;line-height:1.3">FARMACIAS<br>DEL AHORRO</div>
+          <div class="suc-lbl" style="color:#ffffff99">Farmacia</div>
         </div>
-        <div class="suc-card" onclick="selectSucursal('Walmart')">
-          <img class="suc-logo-img" src="https://logo.clearbit.com/walmart.com.mx" alt="Walmart" onerror="this.style.display='none'">
-          <div class="suc-lbl">Walmart</div>
+        <div class="suc-card" onclick="selectSucursal('Walmart')" style="background:#007dc6">
+          <div class="suc-brand" style="font-size:16px">Walmart</div>
+          <div class="suc-lbl" style="color:#ffffff99">Supermercado</div>
         </div>
-        <div class="suc-card" onclick="selectSucursal('Soriana')">
-          <img class="suc-logo-img" src="https://logo.clearbit.com/soriana.com" alt="Soriana" onerror="this.style.display='none'">
-          <div class="suc-lbl">Soriana</div>
+        <div class="suc-card" onclick="selectSucursal('Soriana')" style="background:#5dba2b">
+          <div class="suc-brand" style="font-size:17px">Soriana</div>
+          <div class="suc-lbl" style="color:#ffffff99">Supermercado</div>
         </div>
-        <div class="suc-card" onclick="selectSucursal('Banco Azteca')">
-          <img class="suc-logo-img" src="https://logo.clearbit.com/bancoazteca.com.mx" alt="Banco Azteca" onerror="this.style.display='none'">
-          <div class="suc-lbl">Banco Azteca</div>
+        <div class="suc-card" onclick="selectSucursal('Banco Azteca')" style="background:#0d2e61">
+          <div class="suc-brand" style="font-size:12px;text-align:center;line-height:1.3">BANCO<br>AZTECA</div>
+          <div class="suc-lbl" style="color:#ffffff99">Banco</div>
         </div>
       </div>
       <button class="co-cancel" onclick="closeSucursales()">Cancelar</button>

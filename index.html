@@ -279,6 +279,15 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
 .ag-no{width:100%;background:transparent;border:1px solid #2a2a2a;color:#666;border-radius:11px;padding:13px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer}
 .ag-legal{font-size:10px;color:#444;line-height:1.5;margin-top:18px}
 
+/* ── SUCURSALES POPUP ── */
+#suc-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:500;align-items:flex-end;justify-content:center}
+#suc-overlay.active{display:flex}
+#suc-popup{background:#111;border:1px solid #3fbf7530;border-radius:20px 20px 0 0;width:100%;max-width:480px;padding:0 0 32px;animation:slideUp .22s ease}
+.suc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:4px}
+.suc-card{background:#fff;border-radius:10px;padding:14px 8px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:76px;border:2px solid transparent;transition:border-color .15s,transform .1s;-webkit-tap-highlight-color:transparent}
+.suc-card:active{transform:scale(.97)}
+.suc-lbl{font-size:9px;color:#aaa;text-align:center;letter-spacing:.3px}
+
 /* ── CHECKOUT MODAL ── */
 #co-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:400;align-items:flex-end;justify-content:center}
 #co-overlay.active{display:flex}
@@ -954,6 +963,51 @@ function spCloseOnOverlay(e) {
     <button class="popup-close" onclick="spClose()">Cancelar</button>
   </div>
 </div>
+<!-- SUCURSALES POPUP -->
+<div id="suc-overlay" onclick="sucCloseOnOverlay(event)">
+  <div id="suc-popup">
+    <div class="popup-handle"></div>
+    <div class="co-body">
+      <div style="font-size:10px;letter-spacing:2px;color:var(--g);text-transform:uppercase;margin-bottom:4px">Pago en efectivo</div>
+      <div style="font-size:12px;color:#666;margin-bottom:16px;line-height:1.5">Selecciona donde quieres pagar — te mandamos el numero de referencia por WhatsApp.</div>
+      <div class="suc-grid">
+        <div class="suc-card" onclick="selectSucursal('Kiosko')">
+          <div style="font-family:Arial Black,sans-serif;font-weight:900;color:#e3000f;font-size:19px;line-height:1">kiosko</div>
+          <div class="suc-lbl">Conveniencia</div>
+        </div>
+        <div class="suc-card" onclick="selectSucursal('BBVA')">
+          <div style="font-family:Arial,sans-serif;font-weight:900;color:#004999;font-size:20px;line-height:1">bbva</div>
+          <div class="suc-lbl">Banco / SPEI</div>
+        </div>
+        <div class="suc-card" onclick="selectSucursal('Farmacias Guadalajara')">
+          <div style="font-family:Arial,sans-serif;font-weight:800;color:#006B3F;font-size:11px;text-align:center;line-height:1.3">FARMACIAS<br>GUADALAJARA</div>
+          <div class="suc-lbl">Farmacia</div>
+        </div>
+        <div class="suc-card" onclick="selectSucursal('Farmacias del Ahorro')">
+          <div style="font-family:Arial Black,sans-serif;font-weight:900;color:#cc0000;font-size:26px;line-height:1">A</div>
+          <div style="font-family:Arial,sans-serif;font-size:8px;color:#cc0000;font-weight:700;letter-spacing:.3px">del AHORRO</div>
+          <div class="suc-lbl">Farmacia</div>
+        </div>
+        <div class="suc-card" onclick="selectSucursal('Walmart')">
+          <div style="color:#ffc220;font-size:16px;line-height:1;margin-bottom:1px">✦</div>
+          <div style="font-family:Arial,sans-serif;font-weight:900;color:#007dc6;font-size:14px;line-height:1">Walmart</div>
+          <div class="suc-lbl">Supermercado</div>
+        </div>
+        <div class="suc-card" onclick="selectSucursal('Soriana')">
+          <div style="color:#6db33f;font-size:16px;line-height:1;margin-bottom:1px">♥</div>
+          <div style="font-family:Arial,sans-serif;font-weight:800;color:#6db33f;font-size:16px;line-height:1">Soriana</div>
+          <div class="suc-lbl">Supermercado</div>
+        </div>
+        <div class="suc-card" onclick="selectSucursal('Banco Azteca')">
+          <div style="font-family:Arial,sans-serif;font-weight:800;color:#0d2e61;font-size:13px;text-align:center;line-height:1.3">BANCO<br>AZTECA</div>
+          <div class="suc-lbl">Banco</div>
+        </div>
+      </div>
+      <button class="co-cancel" onclick="closeSucursales()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
 <!-- CHECKOUT MODAL -->
 <div id="co-overlay" onclick="coCloseOnOverlay(event)">
   <div id="co-popup">
@@ -1094,9 +1148,29 @@ function openCheckoutDirect(name, price, notasLabel) {
 }
 
 function selectPago(tipo) {
+  if (tipo === 'Efectivo (sucursal)') { showSucursales(); return; }
   _coPago = tipo;
-  document.getElementById('co-pay-transfer').classList.toggle('selected', tipo==='Transferencia');
-  document.getElementById('co-pay-cash').classList.toggle('selected', tipo==='Efectivo (sucursal)');
+  document.getElementById('co-pay-transfer').classList.add('selected');
+  document.getElementById('co-pay-cash').classList.remove('selected');
+  document.getElementById('co-pay-cash').textContent = 'Efectivo (sucursal)';
+}
+
+function showSucursales() {
+  document.getElementById('suc-overlay').classList.add('active');
+}
+function closeSucursales() {
+  document.getElementById('suc-overlay').classList.remove('active');
+}
+function sucCloseOnOverlay(e) {
+  if (e.target === document.getElementById('suc-overlay')) closeSucursales();
+}
+function selectSucursal(nombre) {
+  _coPago = 'Efectivo en ' + nombre;
+  var btn = document.getElementById('co-pay-cash');
+  btn.textContent = nombre;
+  btn.classList.add('selected');
+  document.getElementById('co-pay-transfer').classList.remove('selected');
+  closeSucursales();
 }
 
 function closeCheckout() {

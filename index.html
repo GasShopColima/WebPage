@@ -241,6 +241,11 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
 #plumas-grid .product-card .product-info{padding:12px 14px 14px}
 #plumas-grid .product-card .pprice{font-size:24px}
 
+/* ── AGOTADO ── */
+.strain-item.agt{opacity:.42;pointer-events:none;position:relative}
+.strain-item.agt::after{content:'Agotado';position:absolute;top:8px;right:10px;font-size:9px;letter-spacing:1px;color:#555;text-transform:uppercase;background:#161616;border:1px solid #2a2a2a;border-radius:4px;padding:2px 6px}
+.s-agt{color:#2e2e2e!important;text-decoration:line-through;text-decoration-color:#333}
+
 /* ── STRAIN PANEL ── */
 #strain-panel{padding:0 14px 0;overflow:hidden;transition:max-height .3s ease}
 #strain-panel.show{padding:10px 14px 0}
@@ -359,15 +364,15 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
   "/>
 </svg></div></div>
   <h1>GasShopColima</h1>
-  <p>Flores Premium · Colima</p>
-  <div class="badge-row"><span class="badge">Top Shelf</span><span class="badge">Delivery</span><span class="badge">Est. 2025</span></div>
+  <p>Delivery de Cannabis · Colima</p>
+  <div class="badge-row"><span class="badge">Discreto</span><span class="badge">Strains Verificados</span><span class="badge">Colima City</span></div>
 </div>
 
 <div id="horario-bar"></div>
 <div class="stats-bar">
-  <div class="stat-item"><div class="stat-num" data-to="50" data-suf="+">50+</div><div class="stat-lbl">Pedidos<br>entregados</div></div>
+  <div class="stat-item"><div class="stat-num">+15</div><div class="stat-lbl">Strains<br>disponibles</div></div>
   <div class="stat-item"><div class="stat-num">30–45</div><div class="stat-lbl">Min de<br>entrega</div></div>
-  <div class="stat-item"><div class="stat-num">10–8</div><div class="stat-lbl">Horario<br>Lun–Dom</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-lbl">Discreto<br>siempre</div></div>
 </div>
 
 <!-- FLOR ESTÁNDAR -->
@@ -517,7 +522,7 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
         <img src="images/img-03.webp" onerror="this.style.display='none'" style="width:50%;height:220px;object-fit:contain;background:#080808">
         <div style="width:50%;height:220px;background:linear-gradient(135deg,#0d0d25,#111);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:10px">
           <div style="font-size:9px;color:var(--g);letter-spacing:2px">3 STRAINS EN 1</div>
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:11px;color:#fff;letter-spacing:1px;text-align:center;opacity:.8">Italian Ice · Lemon Cherry · Z-Runtz</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:11px;color:#fff;letter-spacing:1px;text-align:center;opacity:.8">Italian Ice · Lemon Cherry · <span class="s-agt">Z-Runtz</span></div>
           <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--g)">$850</div>
         </div>
       </div>
@@ -568,7 +573,7 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
       <div style="display:flex;overflow:hidden;border-radius:12px 12px 0 0">
         <img src="images/img-06.webp" style="width:50%;height:220px;object-fit:contain;background:#080808;flex-shrink:0">
         <div style="width:50%;height:220px;background:linear-gradient(135deg,#0d0d20,#111);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px">
-          <div style="font-size:9px;color:#888;letter-spacing:1px;text-align:center">Berry Gelato · GDP · Blue Dream</div>
+          <div style="font-size:9px;color:#888;letter-spacing:1px;text-align:center">Berry Gelato · <span class="s-agt">GDP</span> · Blue Dream</div>
           <div style="font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--g)">$850</div>
           <div style="font-size:9px;color:#555;letter-spacing:1px">2G · LIVE RESIN</div>
         </div>
@@ -763,7 +768,7 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
     <div class="strain-list">
       <div class="strain-item"><div class="strain-img-row"><img src="images/img-15.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Italian Ice</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Cremoso, berry-cítrico, fresco · Relajación con claridad mental</div></div></div></div>
       <div class="strain-item"><div class="strain-img-row"><img src="images/img-16.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Lemon Cherry</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Cítrico ácido, cherry ácido · Eufórico y energizante</div></div></div></div>
-      <div class="strain-item"><div class="strain-img-row"><img src="images/img-17.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Z-Runtz</div><div class="strain-type">Índica</div></div><div class="strain-desc">Candy dulce, Zkittlez · Calma profunda, relajación corporal</div></div></div></div>
+      <div class="strain-item agt"><div class="strain-img-row"><img src="images/img-17.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Z-Runtz</div><div class="strain-type">Índica</div></div><div class="strain-desc">Candy dulce, Zkittlez · Calma profunda, relajación corporal</div></div></div></div>
     </div>
     <button class="popup-close" onclick="closePopup('boutiq')">Cerrar</button>
   </div></div>
@@ -825,7 +830,7 @@ body{background:#000;color:var(--tx);font-family:'Inter',sans-serif;min-height:1
     <div class="popup-price-row"><span class="pl">2G disposable</span><span class="pr">$850</span></div>
     <div class="strains-title">Sabores</div>
     <div class="strain-list">
-      <div class="strain-item"><div class="strain-img-row"><img src="images/img-23.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Grand Daddy Purp</div><div class="strain-type">Índica</div></div><div class="strain-desc">Uva morada intensa, dulce y terrosa. Relajacion profunda, ideal para la noche.</div></div></div></div>
+      <div class="strain-item agt"><div class="strain-img-row"><img src="images/img-23.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-indica"></div><div class="strain-name">Grand Daddy Purp</div><div class="strain-type">Índica</div></div><div class="strain-desc">Uva morada intensa, dulce y terrosa. Relajacion profunda, ideal para la noche.</div></div></div></div>
       <div class="strain-item"><div class="strain-img-row"><img src="images/img-24.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-sativa"></div><div class="strain-name">Pineapple Express</div><div class="strain-type">Sativa</div></div><div class="strain-desc">Piña tropical cítrica, energizante y eufórica. Perfecta para el dia.</div></div></div></div>
       <div class="strain-item"><div class="strain-img-row"><img src="images/img-25.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Blue Dream</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Arándano dulce con notas terrosas. Equilibrado, creativo y funcional.</div></div></div></div>
       <div class="strain-item"><div class="strain-img-row"><img src="images/img-06.webp" class="strain-img"><div class="strain-content"><div class="strain-top"><div class="strain-dot dot-hybrid"></div><div class="strain-name">Berry Gelato</div><div class="strain-type">Híbrido</div></div><div class="strain-desc">Fresa y frutos del bosque con acabado cremoso. Sabor suave y efecto balanceado.</div></div></div></div>
